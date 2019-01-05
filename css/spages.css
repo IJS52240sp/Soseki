@@ -1,0 +1,171 @@
+/* Variables */
+/* General page styling */
+.pages-title {
+  width: 80%;
+  margin: 90px auto 30px;
+  font-size: 35px;
+  text-align: center;
+}
+@media only screen and (min-width: 550px) {
+  .pages-title {
+    margin: 50px auto;
+    font-size: 45px;
+  }
+}
+
+.pages-content {
+  width: 85%;
+  margin: 0 auto 40px;
+  font-size: 16px;
+  /* Text (practice + full) */
+  /* Study guide */
+}
+.pages-content h2 {
+  font-size: 35px;
+  text-align: center;
+  font-weight: normal;
+}
+.pages-content a {
+  color: black;
+}
+.pages-content p {
+  width: 100%;
+  font-size: 15px;
+  text-align: center;
+}
+.pages-content .japanese {
+  margin: 0;
+  font-family: "Sawarabi Mincho";
+}
+.pages-content #vocab {
+  width: 100%;
+  border-collapse: collapse;
+}
+.pages-content #vocab th {
+  font-size: 25px;
+}
+.pages-content #vocab td {
+  color: black;
+  border: 1px solid black;
+  transition: color 0.4s ease;
+}
+.pages-content #vocab th, .pages-content #vocab td {
+  width: 33%;
+  text-align: center;
+  font-weight: normal;
+}
+.pages-content #vocab .vocab-jp {
+  font-family: "Sawarabi Mincho";
+}
+@media only screen and (min-width: 550px) {
+  .pages-content {
+    width: 70%;
+    font-size: 22px;
+  }
+  .pages-content .japanese {
+    font-size: 24px;
+  }
+}
+
+.pages-links h2 {
+  width: 100%;
+  margin-bottom: 0;
+  font-size: 23px;
+  font-weight: normal;
+}
+@media only screen and (min-width: 550px) {
+  .pages-links h2 {
+    font-size: 35px;
+  }
+}
+.pages-links a {
+  width: 100%;
+  margin: 5px;
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 13px;
+}
+@media only screen and (min-width: 550px) {
+  .pages-links a {
+    font-size: 22px;
+  }
+}
+
+/* About */
+.about-cat {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.about-cat img {
+  width: 100px;
+  height: 110px;
+}
+
+/* Media (Mp3 + PNG) */
+.media-wrapper:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.media-wrapper {
+  width: 100%;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+.media-wrapper h2 {
+  text-align: center;
+}
+.media-wrapper .media-link-wrapper {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.media-wrapper .media-link-wrapper p {
+  width: 100%;
+  font-size: 20px;
+}
+@media only screen and (min-width: 550px) {
+  .media-wrapper .media-link-wrapper p {
+    font-size: 30px;
+  }
+}
+
+/* Contact */
+.contact-image {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.contact-image img {
+  width: 140px;
+}
+
+/* Links */
+.links-wrapper:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.links-wrapper {
+  padding-bottom: 40px;
+  font-size: 10px;
+  border-bottom: 1px solid black;
+}
+.links-wrapper a {
+  margin: 5px 0;
+}
+@media only screen and (min-width: 550px) {
+  .links-wrapper {
+    font-size: 17px;
+  }
+}
+
+/*# sourceMappingURL=spages.css.map */

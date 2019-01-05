@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Excercise 10-x in LDW (Canvas)</title>
+</head>
+
+<body>
+	<canvas width="600" height="400" id="my_first_canvas">
+	Your browser does not support HTML canvas. Try using Chrome, Firefox, Safari, or MS Edge.
+	</canvas>
+
+	<script type="text/javascript">
+	window.addEventListener('load', eventWindowLoaded, false);
+	function eventWindowLoaded() {
+		canvasApp();
+	}
+
+	function canvasApp(){
+	var theCanvas = document.getElementById("my_first_canvas");
+	var my_canvas = theCanvas.getContext("2d");
+	my_canvas.strokeRect(0,0,200,260)  // to start, draw a border around the canvas	
+		// draw face
+	my_canvas.beginPath();
+	my_canvas.arc(100, 120, 75, 0, Math.PI*2, false);
+	my_canvas.strokeStyle = "black";
+	my_canvas.lineWidth = "3";
+	my_canvas.fillStyle = "yellow";
+	my_canvas.stroke();
+	my_canvas.fill();
+	my_canvas.closePath();
+		// draw left eye
+	my_canvas.fillStyle = "black";
+	my_canvas.beginPath();
+	my_canvas.arc(65, 90, 10, 0, Math.PI*2, false);
+	my_canvas.stroke();
+	my_canvas.fill();
+	my_canvas.closePath();
+		// draw right eye
+	my_canvas.beginPath();
+	my_canvas.arc(135, 90, 10, 0, Math.PI*2, false);
+	my_canvas.stroke();
+	my_canvas.fill();
+	my_canvas.closePath();
+		// draw smile
+	my_canvas.lineWidth = 6;
+	my_canvas.beginPath();
+	my_canvas.arc(99, 140, 35, 0, -Math.PI, false);
+	my_canvas.stroke();
+	my_canvas.closePath();
+		// Smiley speaks
+	my_canvas.fillStyle = "black";
+	my_canvas.font = "20px _sans";
+	my_canvas.fillText ("Hello Canvas!", 45, 230);
+	}
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,325 @@
+/* general formatting */
+
+* {
+	margin: 0px;
+	padding: 0px;
+	}
+
+p {
+	text-align: justify;
+	}
+
+/* formats for fixed area at top of page */
+
+div.menubar {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 98%;
+	background-color: rgb(255,255,255);
+	z-index: 10;
+	margin-left: 10px;
+	}
+
+div.spacer {
+	height: 120px;
+	}
+
+div.chapterspacer {
+	height: 140px;
+	}
+
+h1.pagetitle {
+	text-align: center;
+	padding-bottom: 10px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	border-bottom: 5px solid rgb(0,0,0);	
+	}
+	
+#orangeline { /* Botchan color */
+	border-bottom: 5px solid rgb(206,69,18);	
+	}
+	
+#lilacline { /* Sanshirō color */
+	border-bottom: 5px solid rgb(104,37,206);	
+	}	
+
+#tanline { /* Kokoro color */
+	border-bottom: 5px solid rgb(153,102,51);	
+	}	
+
+#greenline { /* Neko color */
+	border-bottom: 5px solid rgb(19,108,34);
+	}
+	
+ul#navmenu {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	}
+
+ul#navmenu li {
+	float: left;
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 5px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	}
+
+/* formats for contents pages */
+	
+div.contents {
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+a#chapter {
+	text-decoration: none;
+	}
+	
+span.secnumbers {
+	font-size: 12px;
+	}
+	
+/* formats for chapter text pages */
+
+/* format for chapter text margins and font size - same for all jtext## categories */
+
+div.jtext { /* div.jtext is for Botchan */
+	margin-left: 15px;
+	margin-right: 20px;
+	font-size: 20px;
+	}
+
+div.jtext2 { /* div.jtext2 is for Sanshiro */
+	margin-left: 15px;
+	margin-right: 20px;
+	font-size: 20px;
+	}
+
+div.jtext3 { /* div.jtext3 is for Shorter Works */
+	margin-left: 15px;
+	margin-right: 20px;
+	font-size: 20px;
+	}
+
+div.jtext4 { /* div.jtext4 is for Kokoro */	
+	margin-left: 15px;
+	margin-right: 20px;
+	font-size: 20px;
+	}
+
+div.jtext5 { /* div.jtext5 is for Neko */	
+	margin-left: 15px;
+	margin-right: 20px;
+	font-size: 20px;
+	}
+
+span.vocabspace {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	height: 45px;
+	float: left;
+	}
+
+/* format for lines under vocab - same for all jtext## categories */
+	
+div.jtext span.vocab { /* div.jtext is for Botchan */
+	border-bottom: 1px solid #e1dede;
+	position: relative;
+	}
+	
+div.jtext2 span.vocab { /* div.jtext2 is for Sanshiro */
+	border-bottom: 1px solid #e1dede;
+	position: relative;
+	}	
+
+div.jtext3 span.vocab { /* div.jtext3 is for Shorter Works */
+	border-bottom: 1px solid #e1dede;
+	position: relative;
+	}
+
+div.jtext4 span.vocab { /* div.jtext4 is for Kokoro */
+	border-bottom: 1px solid #e1dede;
+	position: relative;
+	}
+
+div.jtext5 span.vocab { /* div.jtext5 is for Neko */
+	border-bottom: 1px solid #e1dede;
+	position: relative;
+	}
+	
+div.jtext span.vocabdef {
+	position: fixed;
+	display: block;
+	visibility: hidden;
+	z-index: 20;
+	background-color: #ffe0b0;
+	border-radius: 5px;
+	width: 97%;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	top: 105px;
+	left: 10px;
+	}	
+	
+div.jtext span.vocab:hover span.vocabdef {
+	visibility: visible;
+	}
+	
+div.jtext2 span.vocabdef {
+	position: fixed;
+	display: block;
+	visibility: hidden;
+	z-index: 20;
+	background-color: rgb(204, 177, 255);
+	border-radius: 5px;
+	width: 97%;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	top: 105px;
+	left: 10px;
+	}	
+	
+div.jtext2 span.vocab:hover span.vocabdef {
+	visibility: visible;
+	}
+
+div.jtext3 span.vocabdef {
+	position: fixed;
+	display: block;
+	visibility: hidden;
+	z-index: 20;
+	background-color: rgb(185, 213, 255);
+	border-radius: 5px;
+	width: 97%;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	top: 105px;
+	left: 10px;
+	}	
+	
+div.jtext3 span.vocab:hover span.vocabdef {
+	visibility: visible;
+	}
+
+div.jtext4 span.vocabdef {
+	position: fixed;
+	display: block;
+	visibility: hidden;
+	z-index: 20;
+	background-color: rgb(225, 178, 121);
+	border-radius: 5px;
+	width: 97%;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	top: 105px;
+	left: 10px;
+	}	
+	
+div.jtext4 span.vocab:hover span.vocabdef {
+	visibility: visible;
+	}
+
+div.jtext5 span.vocabdef {
+	position: fixed;
+	display: block;
+	visibility: hidden;
+	z-index: 20;
+	background-color: rgb(188, 235, 141);
+	border-radius: 5px;
+	width: 97%;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	top: 105px;
+	left: 10px;
+	}	
+	
+div.jtext5 span.vocab:hover span.vocabdef {
+	visibility: visible;
+	}
+
+p.japanese {
+	text-align: justify;
+	clear: left;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	}
+	
+/* formats for section headers within chapter text pages */	
+
+div.sectionheader {
+	display: block;
+	width: 98%;
+	margin: auto;
+	}
+
+ul#sectionmenu {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px 0px 0px 20px;
+	}
+
+ul#sectionmenu li {
+	float: left;
+	font-weight: bold;
+	font-size: 16px;
+	color: gray;
+	margin-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	line-height: 40px;
+	}
+	
+ul#sectionmenu li a {
+	color: gray;
+	}
+
+/* formats for section pages */	
+
+h3.section {
+	font-size: 20px;
+	margin-top: 10px;
+	margin-left: 15px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	}
+
+div.practicetext {
+	font-size: 20px;
+	margin-left: 15px;
+	margin-right: 20px;	
+	}
+	
+div.translation {
+	font-size: 18px;
+	margin-left: 15px;
+	margin-right: 20px;
+	margin-bottom: 25px;
+	}
+	
+div.translation p {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	}	
+
+div.vocabulary span.vocabdef {
+	margin-left: 15px;
+	margin-right: 20px;
+	display: block;
+	clear: left;
+	font-size: 18px;
+	}

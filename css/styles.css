@@ -1,0 +1,488 @@
+/* general formatting */
+
+* {
+	margin: 0px;
+	padding: 0px;
+	}
+
+p {
+	text-align: justify;
+	}
+
+/* formats for fixed area at top of page */
+
+div.menubar {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 98%;
+	background-color: rgb(255,255,255);
+	z-index: 10;
+	margin-left: 10px;
+	}
+
+div.spacer {
+	height: 120px;
+	}
+
+div.chapterspacer {
+	height: 140px;
+	}
+
+h1.pagetitle {
+	text-align: center;
+	padding-bottom: 10px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	border-bottom: 5px solid rgb(0,0,0);	
+	}
+	
+#orangeline { /* Botchan color */
+	border-bottom: 5px solid rgb(206,69,18);	
+	}
+	
+#lilacline { /* Sanshirō color */
+	border-bottom: 5px solid rgb(104,37,206);	
+	}	
+
+#tanline { /* Kokoro color */
+	border-bottom: 5px solid rgb(153,102,51);	
+	}	
+
+#greenline { /* Neko color */
+	border-bottom: 5px solid rgb(19,108,34);
+	}
+	
+ul#navmenu {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	}
+
+ul#navmenu li {
+	float: left;
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 5px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	}
+
+/* formats for contents pages */
+	
+div.contents {
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+a#chapter {
+	text-decoration: none;
+	}
+	
+span.secnumbers {
+	font-size: 12px;
+	}
+	
+/* formats for chapter text pages */
+
+/* format for chapter text margins and font size - same for all jtext## categories */
+
+div.jtext { /* div.jtext is for Botchan */
+	margin-left: 15px;
+	margin-right: 20px;
+	font-size: 20px;
+	}
+
+div.jtext2 { /* div.jtext2 is for Sanshiro */
+	margin-left: 15px;
+	margin-right: 20px;
+	font-size: 20px;
+	}
+
+div.jtext3 { /* div.jtext3 is for Shorter Works */
+	margin-left: 15px;
+	margin-right: 20px;
+	font-size: 20px;
+	}
+
+div.jtext4 { /* div.jtext4 is for Kokoro */	
+	margin-left: 15px;
+	margin-right: 20px;
+	font-size: 20px;
+	}
+
+div.jtext5 { /* div.jtext5 is for Neko */	
+	margin-left: 15px;
+	margin-right: 20px;
+	font-size: 20px;
+	}
+
+span.vocabspace {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	height: 45px;
+	float: left;
+	}
+
+/* format for lines under vocab - same for all jtext## categories */
+	
+div.jtext span.vocab { /* div.jtext is for Botchan */
+	border-bottom: 1px solid #e1dede;
+	position: relative;
+	}
+	
+div.jtext2 span.vocab { /* div.jtext2 is for Sanshiro */
+	border-bottom: 1px solid #e1dede;
+	position: relative;
+	}	
+
+div.jtext3 span.vocab { /* div.jtext3 is for Shorter Works */
+	border-bottom: 1px solid #e1dede;
+	position: relative;
+	}
+
+div.jtext4 span.vocab { /* div.jtext4 is for Kokoro */
+	border-bottom: 1px solid #e1dede;
+	position: relative;
+	}
+
+div.jtext5 span.vocab { /* div.jtext5 is for Neko */
+	border-bottom: 1px solid #e1dede;
+	position: relative;
+	}
+	
+div.jtext span.vocabdef {
+	position: fixed;
+	display: block;
+	visibility: hidden;
+	z-index: 20;
+	background-color: #ffe0b0;
+	border-radius: 5px;
+	width: 97%;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	top: 105px;
+	left: 10px;
+	}	
+	
+div.jtext span.vocab:hover span.vocabdef {
+	visibility: visible;
+	}
+	
+div.jtext2 span.vocabdef {
+	position: fixed;
+	display: block;
+	visibility: hidden;
+	z-index: 20;
+	background-color: rgb(204, 177, 255);
+	border-radius: 5px;
+	width: 97%;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	top: 105px;
+	left: 10px;
+	}	
+	
+div.jtext2 span.vocab:hover span.vocabdef {
+	visibility: visible;
+	}
+
+div.jtext3 span.vocabdef {
+	position: fixed;
+	display: block;
+	visibility: hidden;
+	z-index: 20;
+	background-color: rgb(185, 213, 255);
+	border-radius: 5px;
+	width: 97%;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	top: 105px;
+	left: 10px;
+	}	
+	
+div.jtext3 span.vocab:hover span.vocabdef {
+	visibility: visible;
+	}
+
+div.jtext4 span.vocabdef {
+	position: fixed;
+	display: block;
+	visibility: hidden;
+	z-index: 20;
+	background-color: rgb(225, 178, 121);
+	border-radius: 5px;
+	width: 97%;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	top: 105px;
+	left: 10px;
+	}	
+	
+div.jtext4 span.vocab:hover span.vocabdef {
+	visibility: visible;
+	}
+
+div.jtext5 span.vocabdef {
+	position: fixed;
+	display: block;
+	visibility: hidden;
+	z-index: 20;
+	background-color: rgb(188, 235, 141);
+	border-radius: 5px;
+	width: 97%;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	top: 105px;
+	left: 10px;
+	}	
+	
+div.jtext5 span.vocab:hover span.vocabdef {
+	visibility: visible;
+	}
+
+p.japanese {
+	text-align: justify;
+	clear: left;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	}
+	
+/* formats for section headers within chapter text pages */	
+
+div.sectionheader {
+	display: block;
+	width: 98%;
+	margin: auto;
+	}
+
+ul#sectionmenu {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px 0px 0px 20px;
+	}
+
+ul#sectionmenu li {
+	float: left;
+	font-weight: bold;
+	font-size: 16px;
+	color: gray;
+	margin-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	line-height: 40px;
+	}
+	
+ul#sectionmenu li a {
+	color: gray;
+	}
+
+/* formats for section pages */	
+
+h3.section {
+	font-size: 20px;
+	margin-top: 10px;
+	margin-left: 15px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	}
+
+div.practicetext {
+	font-size: 20px;
+	margin-left: 15px;
+	margin-right: 20px;	
+	}
+	
+div.translation {
+	font-size: 18px;
+	margin-left: 15px;
+	margin-right: 20px;
+	margin-bottom: 25px;
+	}
+	
+div.translation p {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	}	
+
+div.vocabulary span.vocabdef {
+	margin-left: 15px;
+	margin-right: 20px;
+	display: block;
+	clear: left;
+	font-size: 18px;
+	}
+
+/* new styles added in 2019 to support mobile-friendly formatting */
+
+body.constrain_width {
+	display: flex;
+	justify-content: center;
+	background-color: whitesmoke;
+	}
+body.constrain_width > * {
+	max-width: 1200px;
+	width: 98%;
+	}
+header.chapter_page {
+	position: fixed;
+	top: 0;
+	background: whitesmoke;
+	z-index: 10;
+	}
+h1.page_title {
+	text-align: center;
+	margin-top: 5px;
+	font-size: 24px;
+	padding-bottom: 5px;
+	border-bottom: 5px solid rgb(0,0,0);
+	margin-bottom: 5px;
+	height: 30px;
+	white-space: nowrap;
+	overflow: auto;
+	/* total height = 5 (top margin) + 30 (content box) + 5 (bottom padding) + 5 (border) + 5 (bottom margin) = 50px */
+	}
+ul.nav_menu {
+	list-style-type: none;
+	display: flex;
+	height: 32px; /* preserve menu vertical spacing, even with smaller font on narrow screens */
+	overflow: auto;
+	}
+ul.nav_menu li a {
+	text-decoration: none;
+	display: block;
+	white-space: nowrap;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 2px 4px;
+	margin: 4px;
+	border: 1px solid;
+	border-radius: .25em;
+	}
+ul.nav_menu li a:link, ul.nav_menu li a:visited {
+	color: #888;
+	}
+ul.nav_menu li a:focus, ul.nav_menu li a:hover, ul.nav_menu li a:active {
+	color: #000;
+	}
+span.vocab_area {
+	margin: 4px;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	background-color: #eee;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	}
+p.vocab_prompt {
+	color: #aaa;
+	padding: 0 10px;
+	overflow: hidden;
+	}
+div.chapter_text {	
+	font-size: 20px;
+	/*background-color: whitesmoke;*/
+	margin: 180px 20px 0;
+	}
+div.chapter_text span.vocab { /* div.jtext5 is for Neko */
+	border-bottom: 1px solid #ccc;
+	position: relative;
+	}
+div.chapter_text span.vocabdef {
+	position: fixed;
+	display: block;
+	visibility: hidden;
+	z-index: 20;
+	border-radius: 5px;
+	width: 96%;
+	max-width: 1180px;
+	height: 80px;
+	line-height: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
+	top: 87px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 20px; /* for iOS - may not be necessary */
+	overflow: hidden;
+	}
+div.green_vocab_bar span.vocabdef {
+	background-color: rgb(188, 235, 141);
+	}
+div.chapter_text span.vocab:hover span.vocabdef {
+	visibility: visible;
+	}
+ul.section_break {
+	list-style-type: none; 
+	font-size: 16px; 
+	color: #888; 
+	display: flex; 
+	justify-content: center; 
+	align-items: center;
+	flex-wrap: wrap;
+	}
+ul.section_break li a.study_guide {
+	margin: 0 30px
+	}
+ul.section_break li a:link, ul.section_break li a:visited {
+	color: #888;
+	}
+ul.section_break li a:focus, ul.section_break li a:hover, ul.section_break li a:active {
+	color: #000;
+	}
+/* new css unique to study guide pages */
+ul.extra_space {
+	margin-bottom: 5px;
+	}
+div.study_guide_wrapper {	
+	font-size: 20px;
+	margin: 100px 20px 0;
+	}
+h2.study_guide_sub {
+	font-size: 20px;
+	margin: 10px 0;
+	}
+div.practice_text {
+	font-size: 20px;
+	margin: 10px 0 20px;
+	}
+div.rough_translation {
+	font-size: 18px;
+	margin: 10px 0 20px;
+	}
+div.rough_translation p {
+	margin: 10px 0;
+	}
+div.vocab_list {
+	font-size: 20px;
+	margin: 10px 0 0;
+	}
+div.vocab_list span.vocabdef {
+	display: block;
+	clear: left;
+	}
+@media screen and (min-width: 800px) {
+	ul.nav_menu li a {
+		font-size: 16px;
+		}
+	span.vocab_area {
+		height: 40px;
+		}
+	div.chapter_text {
+		margin: 140px 20px 0;
+		}
+	div.chapter_text span.vocabdef {
+		height: 40px;
+		}
+	}

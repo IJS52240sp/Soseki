@@ -1,0 +1,333 @@
+/* Variables */
+/* Banner */
+.banner {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-image: linear-gradient(#020202, #141414);
+}
+.banner .banner-image-t {
+  height: 100%;
+  display: none;
+}
+.banner #ddm-icon {
+  width: 30px;
+  height: 23px;
+  position: absolute;
+  left: 10px;
+}
+.banner .title-wrapper {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner .title-wrapper .title-kanji {
+  opacity: 0.15;
+  color: white;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 40px;
+}
+.banner .title-wrapper .title {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+}
+@media only screen and (min-width: 550px) {
+  .banner {
+    position: relative;
+    top: auto;
+    height: 300px;
+  }
+  .banner #ddm-icon {
+    display: none;
+  }
+  .banner .banner-image-t {
+    display: block;
+  }
+  .banner .title-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+  }
+  .banner .title-wrapper .title-kanji {
+    font-size: 12vw;
+  }
+  .banner .title-wrapper .title {
+    font-size: 4vw;
+  }
+}
+
+/* Mobile Banner */
+.banner-m {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-image: linear-gradient(#020202, #141414);
+}
+.banner-m #ddm-icon {
+  width: 30px;
+  height: 23px;
+  margin-left: 10px;
+}
+.banner-m .title-wrapper {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner-m .title-wrapper .title-kanji {
+  opacity: 0.15;
+  color: white;
+  font-size: 40px;
+}
+.banner-m .title-wrapper .title {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+}
+@media only screen and (min-width: 550px) {
+  .banner-m {
+    display: none;
+  }
+}
+
+/* Navigation Bar */
+#nav-bar {
+  width: 78%;
+  position: fixed;
+  top: 60px;
+  bottom: 0;
+  left: -100%;
+  z-index: 2;
+  background: linear-gradient(#020202, #141414);
+  box-shadow: 5px 5px 50px 5px;
+}
+#nav-bar .nav-child {
+  width: 100%;
+  height: 16.6666666667%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+#nav-bar .nav-child .nav-child-border {
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  border-bottom: 1px solid white;
+}
+@media only screen and (min-width: 550px) {
+  #nav-bar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    background: white;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    box-shadow: none;
+  }
+  #nav-bar .nav-child {
+    width: 20%;
+    height: 100%;
+    color: black;
+    text-decoration: none;
+  }
+  #nav-bar .nav-child .nav-child-border {
+    width: 100%;
+    height: 75%;
+    position: absolute;
+    border-right: 1px solid #dddddd;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #nav-bar .nav-child {
+    font-size: 24px;
+  }
+}
+
+/* content mask for bg of ddm */
+#content-mask {
+  width: 100%;
+  display: none;
+  position: fixed;
+  top: 60px;
+  bottom: 0;
+  background: #181818;
+  z-index: 1;
+  opacity: 0.6;
+}
+@media only screen and (min-width: 550px) {
+  #content-mask {
+    display: none;
+  }
+}
+
+/* Bookshelf */
+.bookshelf {
+  width: 100%;
+  margin-top: 60px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transform: rotate(0deg);
+  /* Force relative container for fixed children */
+}
+.bookshelf .book {
+  margin: 20px 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 25px;
+  text-align: center;
+  white-space: nowrap;
+  /* Reorder to allow selectors in hover pseudo-state */
+}
+.bookshelf .book a:nth-child(1) {
+  order: 2;
+}
+.bookshelf .book span:nth-child(2) {
+  order: 1;
+}
+.bookshelf .book span:nth-child(3) {
+  order: 3;
+}
+.bookshelf .book .book-title-wrapper {
+  max-width: 157px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bookshelf .book a, .bookshelf .book img {
+  width: 157px;
+  height: 250px;
+}
+.bookshelf .book .book-hover-bg {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.9;
+  background: #181818;
+}
+.bookshelf .book .bd-right {
+  left: 177px;
+}
+.bookshelf .book .bd-left {
+  right: 177px;
+}
+.bookshelf .book .book-desc {
+  min-height: 75%;
+  display: none;
+  position: absolute;
+  z-index: 2;
+  color: white;
+  font-size: 20px;
+  text-align: left;
+  white-space: normal;
+}
+.bookshelf .book .book-desc h2 {
+  margin: 0;
+  font-size: 35px;
+}
+.bookshelf .book .book-desc p {
+  height: auto;
+  margin: 10px 0;
+  font-size: 15px;
+}
+.bookshelf .bookshelf-watermark {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.08;
+  writing-mode: vertical-rl;
+  font-size: 40px;
+}
+@media only screen and (max-width: 750px) {
+  .bookshelf .force-wrap-t {
+    flex-basis: 100%;
+  }
+}
+.bookshelf .force-wrap {
+  flex-basis: 100%;
+}
+@media only screen and (min-width: 550px) {
+  .bookshelf {
+    margin-top: 0;
+  }
+  .bookshelf .book {
+    margin: 0 40px;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .bookshelf .book {
+    margin: 0 15px;
+  }
+  .bookshelf .book .book-desc {
+    width: 220%;
+  }
+  .bookshelf a:hover {
+    z-index: 2;
+  }
+  .bookshelf a:hover ~ span {
+    color: white;
+    z-index: 2;
+  }
+  .bookshelf a:hover ~ .book-hover-bg {
+    display: block;
+  }
+  .bookshelf a:hover ~ .book-desc {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .bookshelf .book {
+    margin: 20px 4vw;
+  }
+  .bookshelf .book .book-desc {
+    width: 300%;
+    font-size: 24px;
+  }
+  .bookshelf .book .book-desc h2 {
+    font-size: 40px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=shome.css.map */
