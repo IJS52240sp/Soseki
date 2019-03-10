@@ -2,44 +2,55 @@
 <html lang="en">
 	
 <head>
-	<style>
-	div.about {
-		margin-left: 15px;
-		margin-right: 20px;
-	}
-	div.about p {
-		font-size: 20px;
-		margin-bottom: 10px;
-	}
-	</style>
 
 	<meta charset="utf-8"/>
 	<meta name="description" content="Natsume Sōseki Japanese Literature"/>
 	<meta http-equiv="author" content="Ian Sutherland"/>
 	
 	<title>Sōseki Project - About</title>	
-	<link href="css/styles.css" type="text/css" rel="stylesheet" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link href="css/styles_Jan2019.css" type="text/css" rel="stylesheet" />
+
+	<style>
+	div.study_guide_wrapper p {
+		font-size: 16px;
+		margin-bottom: 15px;
+		}
+	ul.nav_menu li a#inert {
+		border-color: whitesmoke;
+		}
+	ul.nav_menu li a#inert:focus, ul.nav_menu li a#inert:hover, ul.nav_menu li a#inert:active {
+		color: #888;
+		cursor: default;
+		}
+
+	@media screen and (min-width: 800px) {
+		div.study_guide_wrapper p {
+			font-size: 20px;
+			}
+		}
+
+	</style>
+
 </head>
 	
-<body>
+<body class="constrain_width">
 
 <!-- fixed area at top of page -->
 
-<div class="menubar">
-	<h1 class="pagetitle">Sōseki Project - About</h1>
-	<ul id="navmenu">
+<header class="chapter_page">
+	<h1 class="page_title">Sōseki Project - About</h1>
+	<ul class="nav_menu extra_space">
 		<li><a href="index.html">Home</a></li>
-		<li>About</li>
+		<li><a href="#" id="inert">About</a></li>
 		<li><a href="features.html">Features</a></li>
 		<li><a href="pdfmp3.html">PDFs & MP3s</a></li>
 		<li><a href="contact.html">Contact</a></li>
 		<li><a href="links.html">Links</a></li>
 	</ul>
-</div>	
+</header>
 
-<div class="spacer"></div>
-
-<div class="about">
+<div class="study_guide_wrapper">
 	
 <p>	The purpose of this site is to make the works of Natsume Sōseki more accessible to students of Japanese. These works date from the early 1900s, and the language can be challenging, but reading the original texts is well worth the effort.</p>
 	
@@ -51,7 +62,7 @@
 
 <p>Any and all help is welcome, especially with the detailed text coding. The hope is that with improvements over time this site will evolve from a simple initial effort into a valued resource for fans of Natsume Sōseki.</p>
 
-<p style="color: firebrick;">Moving into 2019, efforts are underway to update the site for a cleaner look and to improve its performance on mobile devices. The initial updates will be made in <em>I am a Cat</em>, which is currently in process. Please report any issues experienced during the transition.</p>
+<p style="color: firebrick;">Moving into 2019, the site is being updated for a cleaner look and to improve its performance on mobile devices. Please report any issues experienced with the new formats via e-mail to Ian Sutherland at <a href="mailto:sosekiproject@gmail.com">Sōseki Project</a> (sosekiproject@gmail.com).</p>
 
 </div>
 		

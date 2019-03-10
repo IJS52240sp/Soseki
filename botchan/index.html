@@ -2,50 +2,148 @@
 <html lang="en">
 	
 <head>
-	<style>
-	div.BotchanLeftRight {
-		width: 233px;
-		height: 600px;
-		float: left;
-		}	
-	div.SosekiBotchanPhotoHolder {
-		width: 433px;
-		height: 600px;
-		margin-top: 10px;
-		float: left;
-		}
-	img.SosekiBotchan {
-    	width: 433px;
-		height: 590px;
-		}
-	p.BotchanChapter {
-		height: 70px;
-		padding: 5px;
-		margin: 10px;
-		color: rgb(76,50,22);
-		background-color:#beb6a5;
-		border: 5px solid rgb(98,71,39);
-		}	
-	p.BotchanChapter:hover {
-		background-color: #b8b46a;
-		}		
-	</style>
 
 	<meta charset="utf-8"/>
 	<meta name="description" content="Natsume Sōseki Japanese Literature"/>
 	<meta http-equiv="author" content="Ian Sutherland"/>
 	
-	<title>Botchan Contents Page</title>	
-	<link href="../css/styles.css" type="text/css" rel="stylesheet" />
+	<title>Botchan Contents Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link href="../css/styles_Jan2019.css" type="text/css" rel="stylesheet" />
+
+	<style>
+	body.constrain_width, header.chapter_page {
+		background-color: oldlace;
+		}
+
+	/* chapter box holders */
+	div.botchan_contents {
+		margin-top: 110px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-content: center;
+		height: 430px;
+		}
+
+	div.botchan_left_right {
+		width: 150px;
+		}
+
+	a.chapter_link {
+		text-decoration: none;
+		}
+	p.botchan_chapter {
+		height: 40px;
+		font-size: 10px;
+		padding: 5px;
+		margin: 10px 5px;
+		color: rgb(76,50,22);
+		background-color: rgb(190, 182, 165);
+		border: 5px solid rgb(98,71,39);
+		}
+	p.botchan_chapter:hover {
+		background-color:rgb(184, 180, 106);
+		}
+	span.secnumbers {
+		font-size: 10px;
+		}
+
+	.off_if_two_cols {
+		display: none;
+		}
+	.on_if_three_cols {
+		display: none;
+		}
+	.on_if_four_cols {
+		display: none;
+		}
+
+	/* photo holders and photos */
+	div#large_soseki_portrait_holder {
+		width: 440px;
+		height: 530px;
+		margin-top: 10px;
+		padding: 0 5px;
+		}
+	div#small_soseki_portrait_holder {
+		width: 200px;
+		height: 230px;
+		padding: 0 5px;
+		}
+	img#Portrait1 {  /* larger photo */
+    	width: 430px;
+		height: 530px;
+		}
+	img#Portrait2 {  /* smaller photo */
+    	width: 190px;
+		height: 230px;
+		}
+	.on_if_two_cols {
+		display: block;
+		}
+
+	
+	@media screen and (min-width: 620px) {  /* go to three columns */
+		div.botchan_contents {
+			height: 410px;
+			}
+		div.botchan_left_right {
+			width: 200px;
+			}
+		div.center_substack {
+			width: 200px;
+			}
+		p.botchan_chapter {
+			height: 50px;
+			font-size: 14px;
+			}
+		span.secnumbers {
+			font-size: 12px;
+			}
+		.off_if_three_cols {
+			display: none;
+			}
+		.off_if_two_cols {
+			display: block;
+			}
+		.on_if_three_cols {
+			display: block;
+			}
+		}
+	@media screen and (min-width: 920px) {  /* go to four columns */
+		div.botchan_contents {
+			height: 550px;
+			}
+		div.botchan_left_right {
+			width: 225px;
+			}
+		div.center_substack {
+			width: 440px;
+			}
+		p.botchan_chapter {
+			height: 60px;
+			font-size: 16px;
+			}
+		.off_if_four_cols {
+			display: none;
+			}
+		.on_if_four_cols {
+			display: block;
+			}
+		}
+
+	</style>
+
 </head>
 	
-<body>
+<body class="constrain_width">
 
 <!-- fixed area at top of page -->
 
-<div class="menubar">
-	<h1 class="pagetitle" id="orangeline">Botchan</h1>
-	<ul id="navmenu">
+<header class="chapter_page">
+	<h1 class="page_title" id="orangeline">Botchan</h1>
+	<ul class="nav_menu extra_space">
 		<li><a href="../index.html">Home</a></li>
 		<li><a href="../about.html">About</a></li>
 		<li><a href="../features.html">Features</a></li>
@@ -53,33 +151,40 @@
 		<li><a href="../contact.html">Contact</a></li>
 		<li><a href="../links.html">Links</a></li>
 	</ul>
-</div>
-	
-<div class="spacer"></div>
+</header>
 
 <!-- contents (chapters and sections) -->
 
-<div class="contents">
-	<div class="BotchanLeftRight">
-		<a href="botchanchapter01.html" id="chapter"><p class="BotchanChapter"><b>Chapter 1</b><br/>growing up ... departure<br/><span class="secnumbers">(sections 001 - 011)</span></p></a>
-		<a href="botchanchapter02.html" id="chapter"><p class="BotchanChapter"><b>Chapter 2</b><br/>arrival ... introductions<br/><span class="secnumbers">(sections 012 - 020)</span></p></a>
-		<a href="botchanchapter03.html" id="chapter"><p class="BotchanChapter"><b>Chapter 3</b><br/>first day ... Tempura Sensei<br/><span class="secnumbers">(sections 021 - 028)</span></p></a>
-		<a href="botchanchapter04.html" id="chapter"><p class="BotchanChapter"><b>Chapter 4</b><br/>night duty<br/><span class="secnumbers">(sections 029 - 038)</span></p></a>
-		<a href="botchanchapter05.html" id="chapter"><p class="BotchanChapter"><b>Chapter 5</b><br/>fishing with Red Shirt<br/><span class="secnumbers">(sections 039 - 048)</span></p></a>
-		<a href="botchanchapter06.html" id="chapter"><p class="BotchanChapter"><b>Chapter 6</b><br/>ice money ... staff meeting<br/><span class="secnumbers">(sections 049 - 063)</span></p></a>
+<div class="botchan_contents">
+
+	<div class="botchan_left_right">
+		<a href="botchanchapter01.html" class="chapter_link"><p class="botchan_chapter"><b>Chapter 1</b><br/>growing up ... departure<br/><span class="secnumbers">(sections 001 - 011)</span></p></a>
+		<a href="botchanchapter02.html" class="chapter_link"><p class="botchan_chapter"><b>Chapter 2</b><br/>arrival ... introductions<br/><span class="secnumbers">(sections 012 - 020)</span></p></a>
+		<a href="botchanchapter03.html" class="chapter_link"><p class="botchan_chapter"><b>Chapter 3</b><br/>first day ... Tempura Sensei<br/><span class="secnumbers">(sections 021 - 028)</span></p></a>
+		<a href="botchanchapter04.html" class="chapter_link"><p class="botchan_chapter"><b>Chapter 4</b><br/>night duty<br/><span class="secnumbers">(sections 029 - 038)</span></p></a>
+		<a href="botchanchapter05.html" class="chapter_link"><p class="botchan_chapter"><b>Chapter 5</b><br/>fishing with Red Shirt<br/><span class="secnumbers">(sections 039 - 048)</span></p></a>
+		<a href="botchanchapter06.html" class="chapter_link"><p class="botchan_chapter off_if_three_cols on_if_four_cols on_if_two_cols"><b>Chapter 6</b><br/>ice money ... staff meeting<br/><span class="secnumbers">(sections 049 - 063)</span></p></a>
 	</div>
 
-	<div class="SosekiBotchanPhotoHolder">
-		<img class="SosekiBotchan" src="images/sosekiportrait590.jpg" alt="Soseki Portrait" />
+	<div class="center_substack on_if_three_cols">
+		<a href="botchanchapter06.html" class="chapter_link"><p class="botchan_chapter off_if_four_cols"><b>Chapter 6</b><br/>ice money ... staff meeting<br/><span class="secnumbers">(sections 049 - 063)</span></p></a>
+		<div id="large_soseki_portrait_holder" class="on_if_four_cols">
+			<img id="Portrait1" src="images/SosekiPortraitLarge.jpg" alt="Soseki Large Portrait" />
+		</div>
+		<div id="small_soseki_portrait_holder" class="off_if_four_cols">
+			<img id="Portrait2" src="images/SosekiPortraitSmall.jpg" alt="Soseki Small Portrait" />
+		</div>
+		<a href="botchanchapter07.html" class="chapter_link"><p class="botchan_chapter off_if_four_cols"><b>Chapter 7</b><br/>Madonna<br/><span class="secnumbers">(sections 064 - 077)</span></p></a>
 	</div>
 
-	<div class="BotchanLeftRight">
-		<a href="botchanchapter07.html" id="chapter"><p class="BotchanChapter"><b>Chapter 7</b><br/>Madonna<br/><span class="secnumbers">(sections 064 - 077)</span></p></a>
-		<a href="botchanchapter08.html" id="chapter"><p class="BotchanChapter"><b>Chapter 8</b><br/>Koga's transfer<br/><span class="secnumbers">(sections 078 - 087)</span></p></a>
-		<a href="botchanchapter09.html" id="chapter"><p class="BotchanChapter"><b>Chapter 9</b><br/>farewell party<br/><span class="secnumbers">(sections 088 - 098)</span></p></a>
-		<a href="botchanchapter10.html" id="chapter"><p class="BotchanChapter"><b>Chapter 10</b><br/>victory day<br/><span class="secnumbers">(sections 099 - 109)</span></p></a>
-		<a href="botchanchapter11.html" id="chapter"><p class="BotchanChapter"><b>Chapter 11</b><br/>getting even ... going home<br/><span class="secnumbers">(sections 110 - 123)</span></p></a>
+	<div class="botchan_left_right">
+		<a href="botchanchapter07.html" class="chapter_link"><p class="botchan_chapter off_if_three_cols on_if_four_cols on_if_two_cols"><b>Chapter 7</b><br/>Madonna<br/><span class="secnumbers">(sections 064 - 077)</span></p></a>
+		<a href="botchanchapter08.html" class="chapter_link"><p class="botchan_chapter"><b>Chapter 8</b><br/>Koga's transfer<br/><span class="secnumbers">(sections 078 - 087)</span></p></a>
+		<a href="botchanchapter09.html" class="chapter_link"><p class="botchan_chapter"><b>Chapter 9</b><br/>farewell party<br/><span class="secnumbers">(sections 088 - 098)</span></p></a>
+		<a href="botchanchapter10.html" class="chapter_link"><p class="botchan_chapter"><b>Chapter 10</b><br/>victory day<br/><span class="secnumbers">(sections 099 - 109)</span></p></a>
+		<a href="botchanchapter11.html" class="chapter_link"><p class="botchan_chapter"><b>Chapter 11</b><br/>getting even ... going home<br/><span class="secnumbers">(sections 110 - 123)</span></p></a>
 	</div>	
+
 </div>
 		
 </body>

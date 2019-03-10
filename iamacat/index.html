@@ -2,65 +2,143 @@
 <html lang="en">
 	
 <head>
-	<style>
-	div.NekoLeftRight {
-		width: 225px;
-		height: 700px;
-		float: left;
-		}	
-	div.NekoCenter {
-		width: 450px;
-		height: 640px;
-		float: left;
-		}
-	div.ShortDiv {  /* for center section - each holds two NekoChapter paragraphs */
-		width: 225px;
-		height: 190px;
-		float: left;
-		}
-	div.NekoHolder {
-		width: 440px;
-		height: 260px;
-		padding-left: 5px;
-		padding-right: 5px;
-		float: left;
-		}
-	img.Postcard {
-    	width: 440px;
-		height: 260px;
-		}
-	p.NekoChapter {
-		height: 60px;
-		padding: 5px;
-		margin-top: 10px;
-		margin-bottom: 10px;
-		margin-left: 5px;
-		margin-right: 5px;
-		color: rgb(30,30,30);
-		background-color: rgb(245, 222, 167);
-		border: 5px solid rgb(148, 122, 34);
-		}
-	p.NekoChapter:hover {
-		background-color:rgb(255, 230, 153);
-		}	
-	body {background-color: seashell;}
-	</style>
 
 	<meta charset="utf-8"/>
 	<meta name="description" content="Natsume Sōseki Japanese Literature"/>
 	<meta http-equiv="author" content="Ian Sutherland"/>
 	
-	<title>I am a Cat Contents Page</title>	
-	<link href="../css/styles.css" type="text/css" rel="stylesheet" />
+	<title>I am a Cat Contents Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link href="../css/styles_Jan2019.css" type="text/css" rel="stylesheet" />
+
+	<style>
+	body.constrain_width, header.chapter_page {
+		background-color: seashell;
+		}
+
+	/* chapter box holders */
+	div.neko_contents {
+		margin-top: 110px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-content: center;
+		height: 780px;
+		}
+	div.neko_left_right {
+		width: 150px;
+		}
+	div.center_substack {  /* for center section - each holds two neko_chapter paragraphs */
+		width: 200px;
+		float: left;
+		}
+
+	/* photo holders and photos */
+	div#large_neko_photo_holder {
+		width: 440px;
+		height: 260px;
+		padding: 0 5px;
+		}
+	div#small_neko_photo_holder {
+		width: 190px;
+		height: 150px;
+		padding: 0 5px;
+		}
+	img#Postcard1 {  /* larger photo */
+    	width: 440px;
+		height: 260px;
+		}
+	img#Postcard2 {  /* smaller photo */
+    	width: 190px;
+		height: 150px;
+		}
+	
+	a.chapter_link {
+		text-decoration: none;
+		}
+	p.neko_chapter {
+		height: 40px;
+		font-size: 10px;
+		padding: 5px;
+		margin: 10px 5px;
+		color: rgb(30,30,30);
+		background-color: rgb(245, 222, 167);
+		border: 5px solid rgb(148, 122, 34);
+		}
+	p.neko_chapter:hover {
+		background-color:rgb(255, 230, 153);
+		}
+	span.secnumbers {
+		font-size: 10px;
+		}
+
+	.off_if_two_cols {
+		display: none;
+		}
+	.on_if_three_cols {
+		display: none;
+		}
+	.on_if_four_cols {
+		display: none;
+		}
+
+	@media screen and (min-width: 620px) {  /* go to three columns */
+		div.neko_contents {
+			height: 650px;
+			}
+		div.neko_left_right {
+			width: 200px;
+			}
+		p.neko_chapter {
+			height: 50px;
+			font-size: 14px;
+			}
+		span.secnumbers {
+			font-size: 12px;
+		}
+		.off_if_three_cols {
+			display: none;
+			}
+		.off_if_two_cols {
+			display: block;
+			}
+		.on_if_three_cols {
+			display: block;
+			}
+		}
+
+	@media screen and (min-width: 920px) {  /* go to four columns */
+		div.neko_contents {
+			height: 640px;
+			}
+		div.neko_left_right {
+			width: 225px;
+			}
+		div.center_substack {
+			width: 225px;
+			}
+		p.neko_chapter {
+			height: 60px;
+			font-size: 16px;
+			}
+		.off_if_four_cols {
+			display: none;
+			}
+		.on_if_four_cols {
+			display: block;
+			}
+		}
+	</style>
+
 </head>
 	
-<body>
+<body class="constrain_width">
 
 <!-- fixed area at top of page -->
 
-<div class="menubar" style="background-color: seashell;">
-	<h1 class="pagetitle" id="greenline">I am a Cat</h1>
-	<ul id="navmenu">
+<header class="chapter_page">
+	<h1 class="page_title" id="greenline">I am a Cat</h1>
+	<ul class="nav_menu extra_space">
 		<li><a href="../index.html">Home</a></li>
 		<li><a href="../about.html">About</a></li>
 		<li><a href="../features.html">Features</a></li>
@@ -68,56 +146,73 @@
 		<li><a href="../contact.html">Contact</a></li>
 		<li><a href="../links.html">Links</a></li>
 	</ul>
-</div>
-	
-<div class="spacer"></div>
+</header>
 
 <!-- contents (chapters and sections) -->
 
-<div class="contents">
+<div class="neko_contents">
 
-	<div class="NekoLeftRight">
-		<a href="iamacat01.html" id="chapter"><p class="NekoChapter"><b>Chapter 1</b><br/>finding a home ... da Vinci<br/><span class="secnumbers">sections 001 - 013</span></p></a>
-		<a href="iamacat02a.html" id="chapter"><p class="NekoChapter"><b>Chapter 2 a</b><br/>New Year's ... recitation<br/><span class="secnumbers">sections 014 - 039</span></p></a>
-		<a href="iamacat02b.html" id="chapter"><p class="NekoChapter"><b>Chapter 2 b</b><br/>Meitei's letter ... Mikeko<br/><span class="secnumbers">sections 040 - 063</span></p></a>
-		<a href="iamacat03a.html" id="chapter"><p class="NekoChapter"><b>Chapter 3 a</b><br/>Natural Man ... Hanako<br/><span class="secnumbers">sections 064 - 086</span></p></a>
-		<a href="iamacat03b.html" id="chapter"><p class="NekoChapter"><b>Chapter 3 b</b><br/>about Kangetsu ... nose talk<br/><span class="secnumbers">sections 087 - 107</span></p></a>
-		<a href="iamacat04a.html" id="chapter"><p class="NekoChapter"><b>Chapter 4 a</b><br/>Suzuki's task ... bald spot<br/><span class="secnumbers">sections 108 - 123</span></p></a>
-		<p class="NekoChapter"><b>Chapter 4 b</b><br/>...<br/><span class="secnumbers"></span></p>
+	<div class="neko_left_right">
+		<a href="iamacat01.html" class="chapter_link"><p class="neko_chapter"><b>Chapter 1</b><br/>finding a home ... da Vinci<br/><span class="secnumbers">sections 001 - 013</span></p></a>
+		<a href="iamacat02a.html" class="chapter_link"><p class="neko_chapter"><b>Chapter 2 a</b><br/>New Year's ... recitation<br/><span class="secnumbers">sections 014 - 039</span></p></a>
+		<a href="iamacat02b.html" class="chapter_link"><p class="neko_chapter"><b>Chapter 2 b</b><br/>Meitei's letter ... Mikeko<br/><span class="secnumbers">sections 040 - 063</span></p></a>
+		<a href="iamacat03a.html" class="chapter_link"><p class="neko_chapter"><b>Chapter 3 a</b><br/>Natural Man ... Hanako<br/><span class="secnumbers">sections 064 - 086</span></p></a>
+		<a href="iamacat03b.html" class="chapter_link"><p class="neko_chapter"><b>Chapter 3 b</b><br/>about Kangetsu ... nose talk<br/><span class="secnumbers">sections 087 - 107</span></p></a>
+		<a href="iamacat04a.html" class="chapter_link"><p class="neko_chapter"><b>Chapter 4 a</b><br/>Suzuki's task ... bald spot<br/><span class="secnumbers">sections 108 - 123</span></p></a>
+		<a href="iamacat04b.html" class="chapter_link"><p class="neko_chapter"><b>Chapter 4 b</b><br/>Suzuki and Meitei<br/><span class="secnumbers">sections 124 - 139</span></p></a>
+		<p class="neko_chapter off_if_four_cols"><b>Chapter 5 a</b><br/>...<br/><span class="secnumbers"></span></p>
+		<p class="neko_chapter off_if_three_cols"><b>Chapter 5 b</b><br/>...<br/><span class="secnumbers"></span></p>
+		<p class="neko_chapter off_if_three_cols"><b>Chapter 6 a</b><br/>...<br/><span class="secnumbers"></span></p>
+		<p class="neko_chapter off_if_three_cols"><b>Chapter 6 b</b><br/>...<br/><span class="secnumbers"></span></p>
 	</div>
 
-	<div class="NekoCenter">
-		<div class="ShortDiv">	
-			<p class="NekoChapter"><b>Chapter 5 a</b><br/>...<br/><span class="secnumbers"></span></p>
-			<p class="NekoChapter"><b>Chapter 5 b</b><br/>...<br/><span class="secnumbers"></span></p>	
+	<div>
+		<div class="center_substack on_if_three_cols">	
+			<p class="neko_chapter off_if_three_cols on_if_four_cols"><b>Chapter 5 a</b><br/>...<br/><span class="secnumbers"></span></p>
+			<p class="neko_chapter"><b>Chapter 5 b</b><br/>...<br/><span class="secnumbers"></span></p>
+			<p class="neko_chapter off_if_four_cols"><b>Chapter 6 a</b><br/>...<br/><span class="secnumbers"></span></p>
+			<p class="neko_chapter off_if_four_cols"><b>Chapter 6 b</b><br/>...<br/><span class="secnumbers"></span></p>
 		</div>
-		<div class="ShortDiv">
-			<p class="NekoChapter"><b>Chapter 7 a</b><br/>...<br/><span class="secnumbers"></span></p>
-			<p class="NekoChapter"><b>Chapter 7 b</b><br/>...<br/><span class="secnumbers"></span></p>
-		</div>
-
-		<div class="NekoHolder">
-			<img class="Postcard" src="images/NekoPostcard1.jpg" alt="Louis Wain Postcard" />
-		</div>
-		
-		<div class="ShortDiv">
-			<p class="NekoChapter"><b>Chapter 6 a</b><br/>...<br/><span class="secnumbers"></span></p>
-			<p class="NekoChapter"><b>Chapter 6 b</b><br/>...<br/><span class="secnumbers"></span></p>
-		</div>
-		<div class="ShortDiv">
-			<p class="NekoChapter"><b>Chapter 8 a</b><br/>...<br/><span class="secnumbers"></span></p>
-			<p class="NekoChapter"><b>Chapter 8 b</b><br/>...<br/><span class="secnumbers"></span></p>
+		<div class="center_substack on_if_four_cols">
+			<p class="neko_chapter"><b>Chapter 7 a</b><br/>...<br/><span class="secnumbers"></span></p>
+			<p class="neko_chapter"><b>Chapter 7 b</b><br/>...<br/><span class="secnumbers"></span></p>
 		</div>
 	</div>
 
-	<div class="NekoLeftRight">
-		<p class="NekoChapter"><b>Chapter 9 a</b><br/>...<br/><span class="secnumbers"></span></p>
-		<p class="NekoChapter"><b>Chapter 9 b</b><br/>...<br/><span class="secnumbers"></span></p>
-		<p class="NekoChapter"><b>Chapter 10 a</b><br/>...<br/><span class="secnumbers"></span></p>
-		<p class="NekoChapter"><b>Chapter 10 b</b><br/>...<br/><span class="secnumbers"></span></p>
-		<p class="NekoChapter"><b>Chapter 11 a</b><br/>...<br/><span class="secnumbers"></span></p>
-		<p class="NekoChapter"><b>Chapter 11 b</b><br/>...<br/><span class="secnumbers"></span></p>
-		<p class="NekoChapter"><b>Chapter 11 c</b><br/>...<br/><span class="secnumbers"></span></p>
+	<div id="large_neko_photo_holder" class="on_if_four_cols">
+		<img id="Postcard1" src="images/NekoPostcard1.jpg" alt="Louis Wain Postcard" />
+	</div>
+
+	<div id="small_neko_photo_holder" class="off_if_two_cols off_if_four_cols">
+		<img id="Postcard2" src="images/NekoPostcard2.jpg" alt="Louis Wain Postcard" />
+	</div>
+	
+	<div>
+		<div class="center_substack on_if_three_cols">
+			<p class="neko_chapter off_if_three_cols on_if_four_cols"><b>Chapter 6 a</b><br/>...<br/><span class="secnumbers"></span></p>
+			<p class="neko_chapter off_if_three_cols on_if_four_cols"><b>Chapter 6 b</b><br/>...<br/><span class="secnumbers"></span></p>
+			<p class="neko_chapter off_if_four_cols"><b>Chapter 7 a</b><br/>...<br/><span class="secnumbers"></span></p>
+			<p class="neko_chapter off_if_four_cols"><b>Chapter 7 b</b><br/>...<br/><span class="secnumbers"></span></p>
+			<p class="neko_chapter off_if_four_cols"><b>Chapter 8 a</b><br/>...<br/><span class="secnumbers"></span></p>
+		</div>
+		<div class="center_substack on_if_four_cols">
+			<p class="neko_chapter"><b>Chapter 8 a</b><br/>...<br/><span class="secnumbers"></span></p>
+			<p class="neko_chapter"><b>Chapter 8 b</b><br/>...<br/><span class="secnumbers"></span></p>
+		</div>
+	</div>
+
+	<div class="neko_left_right">
+		<p class="neko_chapter off_if_three_cols"><b>Chapter 7 a</b><br/>...<br/><span class="secnumbers"></span></p>
+		<p class="neko_chapter off_if_three_cols"><b>Chapter 7 b</b><br/>...<br/><span class="secnumbers"></span></p>
+		<p class="neko_chapter off_if_three_cols"><b>Chapter 8 a</b><br/>...<br/><span class="secnumbers"></span></p>
+		<p class="neko_chapter off_if_four_cols"><b>Chapter 8 b</b><br/>...<br/><span class="secnumbers"></span></p>
+		<p class="neko_chapter"><b>Chapter 9 a</b><br/>...<br/><span class="secnumbers"></span></p>
+		<p class="neko_chapter"><b>Chapter 9 b</b><br/>...<br/><span class="secnumbers"></span></p>
+		<p class="neko_chapter"><b>Chapter 10 a</b><br/>...<br/><span class="secnumbers"></span></p>
+		<p class="neko_chapter"><b>Chapter 10 b</b><br/>...<br/><span class="secnumbers"></span></p>
+		<p class="neko_chapter"><b>Chapter 11 a</b><br/>...<br/><span class="secnumbers"></span></p>
+		<p class="neko_chapter"><b>Chapter 11 b</b><br/>...<br/><span class="secnumbers"></span></p>
+		<p class="neko_chapter"><b>Chapter 11 c</b><br/>...<br/><span class="secnumbers"></span></p>
 	</div>	
 
 </div>

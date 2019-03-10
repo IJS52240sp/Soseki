@@ -2,50 +2,150 @@
 <html lang="en">
 	
 <head>
-	<style>
-	div.KokoroLeftRight {
-		width: 233px;
-		height: 610px;
-		float: left;
-		}	
-	div.StudyPhotoHolder {
-		width: 433px;
-		height: 600px;
-		margin-top: 10px;
-		float: left;
-		}
-	img.InHisStudy {
-    	width: 433px;
-		height: 590px;
-		}
-	p.KokoroChapter {
-		height: 70px;
-		padding: 5px;
-		margin: 10px;
-		color: rgba(30,30,30,1);
-		background-color: rgb(195, 195, 195);
-		border: 5px solid rgb(0,0,0);
-		}	
-	p.KokoroChapter:hover {
-		background-color:rgb(180, 180, 185);
-		}		
-	</style>
 
 	<meta charset="utf-8"/>
 	<meta name="description" content="Natsume Sōseki Japanese Literature"/>
 	<meta http-equiv="author" content="Ian Sutherland"/>
 	
 	<title>Kokoro Contents Page</title>	
-	<link href="../css/styles.css" type="text/css" rel="stylesheet" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link href="../css/styles_Jan2019.css" type="text/css" rel="stylesheet" />
+
+	<style>
+	body.constrain_width, header.chapter_page {
+		background-color: #d3c9bc;
+		}
+
+	/* chapter box holders */
+	div.kokoro_contents {
+		margin-top: 110px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-content: center;
+		height: 430px;
+		}
+
+	div.kokoro_left_right {
+		width: 150px;
+		}
+
+	a.chapter_link {
+		text-decoration: none;
+		}
+	p.kokoro_chapter {
+		height: 40px;
+		font-size: 10px;
+		padding: 5px;
+		margin: 10px 5px;
+		color: #222;
+		background-color: #b2a394;
+		border: 5px solid #756766;
+		}
+	p.kokoro_chapter:hover {
+		background-color: #bdae94;
+		}
+	span.secnumbers {
+		font-size: 10px;
+		}
+
+	.off_if_two_cols {
+		display: none;
+		}
+	.on_if_three_cols {
+		display: none;
+		}
+	.on_if_four_cols {
+		display: none;
+		}
+
+	/* photo holders and photos */
+	div#large_kokoro_cover_holder {
+		width: 440px;
+		height: 530px;
+		margin-top: 10px;
+		padding: 0 5px;
+		}
+	div#small_kokoro_cover_holder {
+		width: 200px;
+		height: 230px;
+		padding: 0 5px;
+		}
+	img#KokoroCover1 {  /* larger photo */
+    	width: 430px;
+		height: 530px;
+		}
+	img#KokoroCover2 {  /* smaller photo */
+    	width: 190px;
+		height: 230px;
+		}
+	.on_if_two_cols {
+		display: block;
+		}
+
+	
+	@media screen and (min-width: 620px) {  /* go to three columns */
+		div.kokoro_contents {
+			height: 410px;
+			}
+		div.kokoro_left_right {
+			width: 200px;
+			}
+		div.center_substack {
+			width: 200px;
+			}
+		p.kokoro_chapter {
+			height: 50px;
+			font-size: 14px;
+			}
+		span.secnumbers {
+			font-size: 12px;
+			}
+		.off_if_three_cols {
+			display: none;
+			}
+		.off_if_two_cols {
+			display: block;
+			}
+		.on_if_three_cols {
+			display: block;
+			}
+		}
+	@media screen and (min-width: 920px) {  /* go to four columns */
+		div.kokoro_contents {
+			height: 550px;
+			}
+		div.kokoro_left_right {
+			width: 225px;
+			}
+		div.center_substack {
+			width: 440px;
+			}
+		p.kokoro_chapter {
+			height: 60px;
+			font-size: 16px;
+			}
+		.off_if_four_cols {
+			display: none;
+			}
+		.on_if_four_cols {
+			display: block;
+			}
+		}
+
+	</style>
+
+
+
 </head>
 	
-<body>
+<body class="constrain_width">
 
 <!-- fixed area at top of page -->
 
-<div class="menubar">
-	<h1 class="pagetitle" id="tanline">Kokoro</h1>
-	<ul id="navmenu">
+<header class="chapter_page">
+	<h1 class="page_title" id="tanline">Kokoro</h1>
+	<ul class="nav_menu extra_space">
 		<li><a href="../index.html">Home</a></li>
 		<li><a href="../about.html">About</a></li>
 		<li><a href="../features.html">Features</a></li>
@@ -53,34 +153,39 @@
 		<li><a href="../contact.html">Contact</a></li>
 		<li><a href="../links.html">Links</a></li>
 	</ul>
-</div>
-	
-<div class="spacer"></div>
+</header>
 
 <!-- contents (chapters and sections) -->
 
-<div class="contents">
+<div class="kokoro_contents">
 
-	<div class="KokoroLeftRight">
-		<a href="kokoro01.html" id="chapter"><p class="KokoroChapter"><b>Sensei and I&nbsp;&nbsp;&nbsp;01-09</b><br/>seaside ... domestic discord<br/><span class="secnumbers">(sections 001 - 018)</span></p></a>
-		<a href="kokoro02.html" id="chapter"><p class="KokoroChapter"><b>Sensei and I&nbsp;&nbsp;&nbsp;10-18</b><br/>idle life ... holding the fort<br/><span class="secnumbers">(sections 019 - 036)</span></p></a>
-		<a href="kokoro03.html" id="chapter"><p class="KokoroChapter"><b>Sensei and I&nbsp;&nbsp;&nbsp;19-27</b><br/>father's illness ... thesis<br/><span class="secnumbers">(sections 037 - 054)</span></p></a>
-		<a href="kokoro04.html" id="chapter"><p class="KokoroChapter"><b>Sensei and I&nbsp;&nbsp;&nbsp;28-36</b><br/>family assets ... graduation<br/><span class="secnumbers">(sections 055 - 072)</span></p></a>
-		<a href="kokoro05.html" id="chapter"><p class="KokoroChapter"><b>My Parents and I&nbsp;&nbsp;&nbsp;01-09</b><br/>back home ... father's relapse<br/><span class="secnumbers">(sections 073 - 090)</span></p></a>
-		<a href="kokoro06.html" id="chapter"><p class="KokoroChapter"><b>My Parents and I&nbsp;&nbsp;&nbsp;10-18</b><br/>caregiving<br/><span class="secnumbers">(sections 091 - 108)</span></p></a>
+	<div class="kokoro_left_right">
+		<a href="kokoro01.html" class="chapter_link"><p class="kokoro_chapter"><b>Sensei and I&nbsp;&nbsp;&nbsp;01-09</b><br/>seaside ... domestic discord<br/><span class="secnumbers">(sections 001 - 018)</span></p></a>
+		<a href="kokoro02.html" class="chapter_link"><p class="kokoro_chapter"><b>Sensei and I&nbsp;&nbsp;&nbsp;10-18</b><br/>idle life ... holding the fort<br/><span class="secnumbers">(sections 019 - 036)</span></p></a>
+		<a href="kokoro03.html" class="chapter_link"><p class="kokoro_chapter"><b>Sensei and I&nbsp;&nbsp;&nbsp;19-27</b><br/>father's illness ... thesis<br/><span class="secnumbers">(sections 037 - 054)</span></p></a>
+		<a href="kokoro04.html" class="chapter_link"><p class="kokoro_chapter"><b>Sensei and I&nbsp;&nbsp;&nbsp;28-36</b><br/>family assets ... graduation<br/><span class="secnumbers">(sections 055 - 072)</span></p></a>
+		<a href="kokoro05.html" class="chapter_link"><p class="kokoro_chapter"><b>My Parents and I&nbsp;&nbsp;&nbsp;01-09</b><br/>back home ... father's relapse<br/><span class="secnumbers">(sections 073 - 090)</span></p></a>
+		<a href="kokoro06.html" class="chapter_link"><p class="kokoro_chapter off_if_three_cols on_if_four_cols on_if_two_cols"><b>My Parents and I&nbsp;&nbsp;&nbsp;10-18</b><br/>caregiving<br/><span class="secnumbers">(sections 091 - 108)</span></p></a>
 	</div>
 
-	<div class="StudyPhotoHolder">
-		<img class="InHisStudy" src="images/in_his_study.jpg" alt="Sōseki in his Study" />
+	<div class="center_substack on_if_three_cols">
+		<a href="kokoro06.html" class="chapter_link"><p class="kokoro_chapter off_if_four_cols"><b>My Parents and I&nbsp;&nbsp;&nbsp;10-18</b><br/>caregiving<br/><span class="secnumbers">(sections 091 - 108)</span></p></a>
+		<div id="large_kokoro_cover_holder" class="on_if_four_cols">
+			<img id="KokoroCover1" src="images/KokoroCoverLarge.jpg" alt="Kokoro Large Cover" />
+		</div>
+		<div id="small_kokoro_cover_holder" class="off_if_four_cols">
+			<img id="KokoroCover2" src="images/KokoroCoverSmall.jpg" alt="Kokoro Small Cover" />
+		</div>
+		<a href="kokoro07.html" class="chapter_link"><p class="kokoro_chapter off_if_four_cols"><b>Sensei's Testament&nbsp;&nbsp;&nbsp;01-09</b><br/>deceit ... cashing out<br/><span class="secnumbers">(sections 109 - 126)</span></p></a>
 	</div>
 
-	<div class="KokoroLeftRight">
-		<a href="kokoro07.html" id="chapter"><p class="KokoroChapter"><b>Sensei's Testament&nbsp;&nbsp;&nbsp;01-09</b><br/>deceit ... cashing out<br/><span class="secnumbers">(sections 109 - 126)</span></p></a>
-		<a href="kokoro08.html" id="chapter"><p class="KokoroChapter"><b>Sensei's Testament&nbsp;&nbsp;&nbsp;10-18</b><br/>quieter lodgings<br/><span class="secnumbers">(sections 127 - 144)</span></p></a>
-		<a href="kokoro09.html" id="chapter"><p class="KokoroChapter"><b>Sensei's Testament&nbsp;&nbsp;&nbsp;19-27</b><br/>bringing in K<br/><span class="secnumbers">(sections 145 - 162)</span></p></a>
-		<a href="kokoro10.html" id="chapter"><p class="KokoroChapter"><b>Sensei's Testament&nbsp;&nbsp;&nbsp;28-36</b><br/>Bōshū ... K's confession<br/><span class="secnumbers">(sections 163 - 180)</span></p></a>
-		<a href="kokoro11.html" id="chapter"><p class="KokoroChapter"><b>Sensei's Testament&nbsp;&nbsp;&nbsp;37-46</b><br/>rivalry ... betrothal<br/><span class="secnumbers">(sections 181 - 200)</span></p></a>
-		<a href="kokoro12.html" id="chapter"><p class="KokoroChapter"><b>Sensei's Testament&nbsp;&nbsp;&nbsp;47-56</b><br/>endings<br/><span class="secnumbers">(sections 201 - 220)</span></p></a>	
+	<div class="kokoro_left_right">
+		<a href="kokoro07.html" class="chapter_link"><p class="kokoro_chapter off_if_three_cols on_if_four_cols on_if_two_cols"><b>Sensei's Testament&nbsp;&nbsp;&nbsp;01-09</b><br/>deceit ... cashing out<br/><span class="secnumbers">(sections 109 - 126)</span></p></a>
+		<a href="kokoro08.html" class="chapter_link"><p class="kokoro_chapter"><b>Sensei's Testament&nbsp;&nbsp;&nbsp;10-18</b><br/>quieter lodgings<br/><span class="secnumbers">(sections 127 - 144)</span></p></a>
+		<a href="kokoro09.html" class="chapter_link"><p class="kokoro_chapter"><b>Sensei's Testament&nbsp;&nbsp;&nbsp;19-27</b><br/>bringing in K<br/><span class="secnumbers">(sections 145 - 162)</span></p></a>
+		<a href="kokoro10.html" class="chapter_link"><p class="kokoro_chapter"><b>Sensei's Testament&nbsp;&nbsp;&nbsp;28-36</b><br/>Bōshū ... K's confession<br/><span class="secnumbers">(sections 163 - 180)</span></p></a>
+		<a href="kokoro11.html" class="chapter_link"><p class="kokoro_chapter"><b>Sensei's Testament&nbsp;&nbsp;&nbsp;37-46</b><br/>rivalry ... betrothal<br/><span class="secnumbers">(sections 181 - 200)</span></p></a>
+		<a href="kokoro12.html" class="chapter_link"><p class="kokoro_chapter"><b>Sensei's Testament&nbsp;&nbsp;&nbsp;47-56</b><br/>endings<br/><span class="secnumbers">(sections 201 - 220)</span></p></a>	
 	</div>
 	
 </div>

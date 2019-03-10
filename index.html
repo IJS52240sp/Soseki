@@ -2,113 +2,234 @@
 <html lang="en">
 	
 <head>
-	<style>
-	div.bookcover {
-		margin-left: 10px;
-		margin-bottom: 10px;
-		width: 98%;
-		}
-	img.cover {
-		float: left;
-		margin: 5px;
-		height: 250px;
-		width: 157px;
-		}
-	#orange { /* Botchan border color */
-		border: 5px solid rgb(206,69,18);
-		}
-	#lilac { /* Sanshirō border color */
-		border: 5px solid rgb(104,37,206);
-		}
-	#tan { /* Kokoro border color */
-		border: 5px solid rgb(153,102,51);
-		}
-	#green { /* Neko border color */
-		border: 5px solid rgb(19,108,34);
-		} 
-	#black { /* Short Works collage border color */
-		border: 5px solid rgb(0,0,0);
-		} 	
-	h2.booktitle {
-		margin-left: 190px;
-		margin-bottom: 10px;
-		}
-	h3.booktitle {
-		text-align: justify;
-		margin-left: 190px;
-		margin-right: 20px;
-		margin-bottom: 10px;
-		}
-	p.notes {
-		font-size: 14px;
-		margin-left: 190px; 
-		margin-right: 20px
-		}
-	</style>
 
 	<meta charset="utf-8"/>
 	<meta name="description" content="Natsume Sōseki (Soseki) Japanese Literature"/>
 	<meta http-equiv="author" content="Ian Sutherland"/>
 	
 	<title>Sōseki Project</title>	
-	<link href="css/styles.css" type="text/css" rel="stylesheet" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link href="css/styles_Jan2019.css" type="text/css" rel="stylesheet"/>		
+
+	<style>
+
+	div.homepage_wrapper {	
+		margin: 115px 10px 0;
+		}
+	picture.home_banner {
+		position: fixed;
+		display: block;
+		left: 50%;
+		transform: translateX(-50%);
+		}
+
+	ul.nav_menu li a#inert {
+		border-color: whitesmoke;
+		}
+	ul.nav_menu li a#inert:focus, ul.nav_menu li a#inert:hover, ul.nav_menu li a#inert:active {
+		color: #888;
+		cursor: default;
+		}
+	ul.extra_space {
+		margin-top: 70px;
+		}
+
+	div.book_holder {
+		display: flex;
+		height: 176px;
+		margin-bottom: 10px;
+		width: 98%;
+		}
+	div.book_info {
+		height: 160px;
+		overflow-y: scroll
+		}
+	div.cover {
+		margin: 5px;
+		height: 160px;
+		width: 100px;
+		}
+
+	#orange { /* Botchan border color */
+		border: 3px solid rgb(206,69,18);
+		}
+	#lilac { /* Sanshirō border color */
+		border: 3px solid rgb(104,37,206);
+		}
+	#tan { /* Kokoro border color */
+		border: 3px solid rgb(153,102,51);
+		}
+	#green { /* Neko border color */
+		border: 3px solid rgb(19,108,34);
+		} 
+	#black { /* Short Works collage border color */
+		border: 3px solid rgb(0,0,0);
+		} 	
+
+	h2.book_title {
+		margin-top: 5px;
+		margin-left: 5px;
+		margin-bottom: 8px;
+		font-size: 16px;
+		}
+	h2#short_works {
+		margin-top: 15px; /* to compensate for no furigana */
+		}
+	h3.book_description {
+		text-align: justify;
+		margin: 0 8px 8px 5px;
+		font-size: 12px;
+		}
+	p.notes {
+		font-size: 10px;
+		margin-left: 5px;
+		margin-bottom: 8px;
+		}
+	p.click_arrow {
+		font-size: 12px;
+		margin-bottom: 10px;
+		}
+
+	@media screen and (min-width: 800px) {
+		div.homepage_wrapper {
+			margin: 150px 10px 0;
+			}
+		ul.extra_space {
+			margin-top: 100px;
+			}
+		div.book_holder {
+			height: 216px;
+			}
+		div.cover {
+			margin: 5px;
+			height: 200px;
+			width: 125px;
+			}
+		div.book_info {
+			height: 200px;
+			overflow-y: scroll
+			}
+		h2.book_title {
+			margin-bottom: 10px;
+			font-size: 20px;
+			}
+		h3.book_description {
+			margin: 0 10px 10px 5px;
+			font-size: 16px;
+			}
+		p.notes {
+			font-size: 14px;
+			margin-right: 20px
+			}
+		p.click_arrow {
+			font-size: 14px;
+			margin-bottom: 15px;
+			}
+		p.notes {
+			font-size: 12px;
+			margin-left: 10px;
+			margin-bottom: 10px;
+			}
+		}
+
+	</style>
+
 </head>
 
-<body>
+<body class="constrain_width">
 
 <!-- fixed area at top of page -->
 
-<div class="menubar">
-	<h1 class="pagetitle">Sōseki Project</h1>
-	<ul id="navmenu">
-		<li>Home</li>
+
+
+<header class="chapter_page">
+	<div>
+		<picture class="home_banner">
+			<source media="(min-width: 800px)" srcset="images/homepage_banner_large.jpg">
+			<img src="images/homepage_banner_small.jpg" alt="Homepage Banner">
+		</picture>
+	</div>
+	<ul class="nav_menu extra_space">
+		<li><a href="#" id="inert">Home</a></li>
 		<li><a href="about.html">About</a></li>
 		<li><a href="features.html">Features</a></li>
 		<li><a href="pdfmp3.html">PDFs & MP3s</a></li>
 		<li><a href="contact.html">Contact</a></li>
 		<li><a href="links.html">Links</a></li>
 	</ul>
-</div>
-
-<div class="spacer"></div>
+</header>
 
 <!-- book covers and descriptions -->
 
-<div class="bookcover">
+<div class="homepage_wrapper">
 
-	<a href="botchan/index.html"><img class="cover" src="images/botchancover250.jpg" alt="Botchan Cover" id="orange" /></a>
-	<h2 class="booktitle">Botchan (<ruby>坊<rt>ぼ</rt></ruby>っちゃん) by Natsume Sōseki (<ruby>夏目<rt>なつめ</rt>漱石<rt>そうせき</rt></ruby>) &nbsp;&nbsp;&nbsp;&nbsp;1906</h2>
-	<h3 class="booktitle">The most famous and widely read of Sōseki's works, this novel starts with anecdotes from Botchan's rash and reckless school days. The story then shifts into a hilarious account of his ill-fated first job, a teaching assignment far from Tokyo in "barbaric" small-town Shikoku.</h3>
-	<p>&#8592; click on cover for Botchan contents page</p>
-	<br clear="all">
+<div class="book_holder">
+	<div class="cover" id="orange">
+		<a href="botchan/index.html">
+			<picture>
+				<source media="(min-width: 800px)" srcset="images/botchancover200.jpg">
+				<img src="images/botchancover160.jpg" alt="Botchan Cover">
+			</picture>
+		</a>
+	</div>
+	<div class="book_info">
+		<h2 class="book_title">Botchan (<ruby>坊<rt>ぼ</rt></ruby>っちゃん)&emsp;1906</h2>
+		<h3 class="book_description">The most famous and widely read of Sōseki's works, this novel starts with anecdotes from Botchan's rash and reckless school days. The story then shifts into a hilarious account of his ill-fated first job, a teaching assignment far from Tokyo in "barbaric" small-town Shikoku.</h3>
+		<h3 class="book_description">With audio by Saki</h3>
+		<p class="click_arrow">&#8592; click cover for contents page</p>
+	</div>
 </div>
 	
-<div class="bookcover">
-	<a href="sanshiro/index.html"><img class="cover" src="images/sanshirocover250.jpg" alt="Sanshiro Cover" id="lilac" /></a>
-	<h2 class="booktitle">Sanshirō (<ruby>三四郎<rt>さんしろう</rt></ruby>) by Natsume Sōseki (<ruby>夏目<rt>なつめ</rt>漱石<rt>そうせき</rt></ruby>) &nbsp;&nbsp;&nbsp;&nbsp; 1908</h2>
-	<h3 class="booktitle">The charming story of Sanshirō, a young man who arrives from the country to study at the University of Tokyo. Passive by nature and just beginning to explore life's possibilities, Sanshirō cautiously samples the offerings of his new environment: the big city, elite academia, and captivating young ladies.</h3>	
-	<p>&#8592; click on cover for Sanshirō contents page</p>
-	<br clear="all">
+<div class="book_holder">
+	<div class="cover" id="lilac">
+		<a href="sanshiro/index.html">
+			<picture>
+				<source media="(min-width: 800px)" srcset="images/sanshirocover200.jpg">
+				<img src="images/sanshirocover160.jpg" alt="Sanshiro Cover">
+			</picture>
+		</a>
+	</div>
+	<div class="book_info">
+		<h2 class="book_title">Sanshirō (<ruby>三四郎<rt>さんしろう</rt></ruby>)&emsp;1908</h2>
+		<h3 class="book_description">The charming story of Sanshirō, a young man who arrives from the country to study at the University of Tokyo. Passive by nature and just beginning to explore life's possibilities, Sanshirō cautiously samples the offerings of his new environment: the big city, elite academia, and captivating young ladies.</h3>
+		<h3 class="book_description">With audio by Michiko Akioka</h3>
+		<p class="click_arrow">&#8592; click cover for contents page</p>
+	</div>
 </div>
-	
 
-<div class="bookcover">
-	<a href="kokoro/index.html"><img class="cover" src="images/kokorocover250.jpg" alt="Kokoro Cover" id="tan" /></a>
-	<h2 class="booktitle">Kokoro (<ruby>こゝろ<rt>こころ</rt></ruby>) by Natsume Sōseki (<ruby>夏目<rt>なつめ</rt>漱石<rt>そうせき</rt></ruby>) &nbsp;&nbsp;&nbsp;&nbsp;1914</h2>
-	<h3 class="booktitle">A young student forms a friendship with an enigmatic older man, whom he refers to as 'Sensei.' Over time, and finally through a long confessional letter, the younger man comes to know of Sensei's past and to understand the reasons behind his eccentric demeanor.</h3>
-	<p>&#8592; click on cover for Kokoro contents page</p>
-	<br clear="all">
+<div class="book_holder">
+	<div class="cover" id="tan">
+		<a href="kokoro/index.html">
+			<picture>
+				<source media="(min-width: 800px)" srcset="images/kokorocover200.jpg">
+				<img src="images/kokorocover160.jpg" alt="Kokoro Cover">
+			</picture>
+		</a>
+	</div>
+	<div class="book_info">
+		<h2 class="book_title">Kokoro (<ruby>こゝろ<rt>こころ</rt></ruby>)&emsp;1914</h2>
+		<h3 class="book_description">A young student forms a friendship with an enigmatic older man, whom he refers to as 'Sensei.' Over time, and finally through a long confessional letter, the younger man comes to know of Sensei's past and to understand the reasons behind his eccentric demeanor.</h3>
+		<h3 class="book_description">With audio by Watanabe Tomoake (渡辺知明)</h3>
+		<p class="click_arrow">&#8592; click cover for contents page</p>
+	</div>
 </div>
-	
 
-<div class="bookcover">
-	<a href="iamacat/index.html"><img class="cover" src="images/nekocover250.jpg" alt="Neko Cover" id="green" /></a>
-	<h2 class="booktitle">I am a Cat (<ruby>吾輩<rt>わがはい</rt></ruby>は<ruby>猫<rt>ねこ</rt></ruby>である) by Natsume Sōseki (<ruby>夏目	<rt>なつめ</rt>漱石<rt>そうせき</rt></ruby>) &nbsp;&nbsp;&nbsp;&nbsp;1905</h2>
-	<h3 class="booktitle">A lost cat takes up residence in the home of a teacher, from where he offers a no-holds-barred commentary on his master, his master's household, the neighborhood, Japanese society, and human beings in general.</h3> 
-	<p class="notes">(notes: this lengthy work is less a novel and more a series of episodes - it can as well be read in pieces as straight through; Chapter 1 was initially written as stand-alone - there is some discontinuity between Chapter 1 and the following chapters)</p>
-</br>
-	<p>&#8592; {in process - Chapter 3 (part b) uploaded November 24, 2018}</p>
-	<br clear="all">
+<div class="book_holder">
+	<div class="cover" id="green">
+		<a href="iamacat/index.html">
+			<picture>
+				<source media="(min-width: 800px)" srcset="images/nekocover200.jpg">
+				<img src="images/nekocover160.jpg" alt="Neko Cover">
+			</picture>
+		</a>
+	</div>
+	<div class="book_info">
+		<h2 class="book_title">I am a Cat (<ruby>吾輩<rt>わがはい</rt></ruby>は<ruby>猫<rt>ねこ</rt></ruby>である)&emsp;1905</h2>
+		<h3 class="book_description">A lost cat takes up residence in the home of a teacher, from where he offers a no-holds-barred commentary on his master, his master's household, the neighborhood, Japanese society, and human beings in general.</h3>
+		<h3 class="book_description">With audio by Fujii Naoko (藤井直子)</h3>
+		<p class="notes">(notes: this lengthy work is less a novel and more a series of episodes - it can as well be read in pieces as straight through; Chapter 1 was initially written as stand-alone - there is some discontinuity between Chapter 1 and the following chapters)</p>
+		<p class="click_arrow">&#8592; {in process - Chapter 4 (part a) uploaded January 17, 2019}</p>
+	</div>
 </div>
 
 <div class="links">
@@ -116,13 +237,24 @@
 	<br/>
 </div>
 
-<div class="bookcover">
-	<a href="shortworks/index.html"><img class="cover" src="images/shortworks250.jpg" alt="Shorter Works Cover" id="black" /></a>
-	<h2 class="booktitle">A selection of Sōseki's shorter works</h2>
-	<h3 class="booktitle">Ten Nights of Dreams (夢十夜)&nbsp;&nbsp;/&nbsp;&nbsp;Bunchō (文鳥)&nbsp;&nbsp;/&nbsp;&nbsp;The Tower of London (倫敦塔)</h3>	
-	<p>&#8592; click on image for listing</p>
+<div class="book_holder">
+	<div class="cover" id="black">
+		<a href="shortworks/index.html">
+			<picture>
+				<source media="(min-width: 800px)" srcset="images/shortworks200.jpg">
+				<img src="images/shortworks160.jpg" alt="Shorter Works Covers">
+			</picture>
+		</a>
+	</div>
+	<div class="book_info">
+		<h2 class="book_title" id="short_works">A selection of Sōseki's shorter works</h2>
+		<h3 class="book_description">Ten Nights of Dreams (夢十夜)&nbsp;&nbsp;/&nbsp;&nbsp;Bunchō (文鳥)&nbsp;&nbsp;/&nbsp;&nbsp;The Tower of London (倫敦塔)</h3>	
+		<p class="click_arrow">&#8592; click on image for listing</p>
+	</div>
+</div>	
 
-</div>		
+</div>
+	
 </body>
 </html>
 

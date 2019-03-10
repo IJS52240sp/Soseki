@@ -2,50 +2,147 @@
 <html lang="en">
 	
 <head>
-	<style>
-	div.SanshiroLeftRight {
-		width: 234px;
-		height: 640px;
-		float: left;
-		}	
-	div.SosekiSanshiroPhotoHolder {
-		width: 432px;
-		height: 620px;
-		margin-top: 10px;
-		float: left;
-		}
-	img.SosekiSanshiro {
-		width: 432px;
-		height: 620px;
-		}
-	p.SanshiroChapter {
-		height: 60px;
-		padding: 5px;
-		margin: 10px;
-		color: rgba(30,30,30,1);
-		background-color: rgb(195, 195, 195);
-		border: 5px solid rgb(60,60,60);
-		}
-	p.SanshiroChapter:hover {
-		background-color:rgb(185, 180, 185);
-		}		
-	</style>
 
 	<meta charset="utf-8"/>
 	<meta name="description" content="Natsume Sōseki Japanese Literature"/>
 	<meta http-equiv="author" content="Ian Sutherland"/>
 	
 	<title>Sanshirō Contents Page</title>	
-	<link href="../css/styles.css" type="text/css" rel="stylesheet" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link href="../css/styles_Jan2019.css" type="text/css" rel="stylesheet" />
+
+	<style>
+	body.constrain_width, header.chapter_page {
+		background-color: rgb(245, 240, 245);
+		}
+
+	/* chapter box holders */
+	div.sanshiro_contents {
+		margin-top: 110px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-content: center;
+		height: 500px;
+		}
+	div.sanshiro_left_right {
+		width: 150px;
+		}
+	a.chapter_link {
+		text-decoration: none;
+		}
+	p.sanshiro_chapter {
+		height: 40px;
+		font-size: 10px;
+		padding: 5px;
+		margin: 10px 5px;
+		color: #000;
+		background-color: #faedff;
+		border: 5px solid #7800a8;
+		}
+	p.sanshiro_chapter:hover {
+		background-color: #eedcf5;
+		}
+	span.secnumbers {
+		font-size: 10px;
+		}
+
+	.off_if_two_cols {
+		display: none;
+		}
+	.on_if_three_cols {
+		display: none;
+		}
+	.on_if_four_cols {
+		display: none;
+		}
+
+	/* photo holders and photos */
+	div#large_sanshiro_cover_holder {
+		width: 440px;
+		height: 620px;
+		margin-top: 10px;
+		padding: 0 5px;
+		}
+	div#small_sanshiro_cover_holder {
+		width: 220px;
+		height: 310px;
+		padding: 0 5px;
+		}
+	img#SanshiroCover1 {  /* larger photo */
+    	width: 430px;
+		height: 620px;
+		}
+	img#SanshiroCover2 {  /* smaller photo */
+    	width: 210px;
+		height: 310px;
+		}
+	.on_if_two_cols {
+		display: block;
+		}
+
+	
+	@media screen and (min-width: 630px) {  /* go to three columns */
+		div.sanshiro_contents {
+			height: 490px;
+			}
+		div.sanshiro_left_right {
+			width: 200px;
+			}
+		div.center_substack {
+			width: 220px;
+			}
+		p.sanshiro_chapter {
+			height: 50px;
+			font-size: 14px;
+			}
+		span.secnumbers {
+			font-size: 12px;
+			}
+		.off_if_three_cols {
+			display: none;
+			}
+		.off_if_two_cols {
+			display: block;
+			}
+		.on_if_three_cols {
+			display: block;
+			}
+		}
+	@media screen and (min-width: 920px) {  /* go to four columns */
+		div.sanshiro_contents {
+			height: 640px;
+			}
+		div.sanshiro_left_right {
+			width: 225px;
+			}
+		div.center_substack {
+			width: 440px;
+			}
+		p.sanshiro_chapter {
+			height: 60px;
+			font-size: 16px;
+			}
+		.off_if_four_cols {
+			display: none;
+			}
+		.on_if_four_cols {
+			display: block;
+			}
+		}
+
+	</style>
+
+
 </head>
 	
-<body>
+<body class="constrain_width">
 
 <!-- fixed area at top of page -->
 
-<div class="menubar">
-	<h1 class="pagetitle" id="lilacline">Sanshirō</h1>
-	<ul id="navmenu">
+<header class="chapter_page">
+	<h1 class="page_title" id="lilacline">Sanshirō</h1>
+	<ul class="nav_menu extra_space">
 		<li><a href="../index.html">Home</a></li>
 		<li><a href="../about.html">About</a></li>
 		<li><a href="../features.html">Features</a></li>
@@ -53,35 +150,40 @@
 		<li><a href="../contact.html">Contact</a></li>
 		<li><a href="../links.html">Links</a></li>
 	</ul>
-</div>
-	
-<div class="spacer"></div>
+</header>
 
 <!-- contents (chapters and sections) -->
 
-<div class="contents">
+<div class="sanshiro_contents">
 
-	<div class="SanshiroLeftRight">
-		<a href="sanshirochapter01.html" id="chapter"><p class="SanshiroChapter"><b>Chapter 1</b><br/>traveling to Tōkyō<br/><span class="secnumbers">(sections 001 - 015)</span></p></a>
-		<a href="sanshirochapter02.html" id="chapter"><p class="SanshiroChapter"><b>Chapter 2</b><br/>meeting Nonomiya<br/><span class="secnumbers">(sections 016 - 026)</span></p></a>
-		<a href="sanshirochapter03.html" id="chapter"><p class="SanshiroChapter"><b>Chapter 3</b><br/>lectures ... hospital girls<br/><span class="secnumbers">(sections 027 - 053)</span></p></a>		
-		<a href="sanshirochapter04.html" id="chapter"><p class="SanshiroChapter"><b>Chapter 4</b><br/>moving Professor Hirota<br/><span class="secnumbers">(sections 054 - 084)</span></p></a>		
-		<a href="sanshirochapter05.html" id="chapter"><p class="SanshiroChapter"><b>Chapter 5</b><br/>stray sheep<br/><span class="secnumbers">(sections 085 - 103)</span></p></a>
-		<a href="sanshirochapter06.html" id="chapter"><p class="SanshiroChapter"><b>Chapter 6</b><br/>great dark void ... field day<br/><span class="secnumbers">(sections 104 - 130)</span></p></a>				
-		<a href="sanshirochapter07.html" id="chapter"><p class="SanshiroChapter"><b>Chapter 7</b><br/>Hirota and Haraguchi<br/><span class="secnumbers">(sections 131 - 144)</span></p></a>	
+	<div class="sanshiro_left_right">
+		<a href="sanshirochapter01.html" class="chapter_link"><p class="sanshiro_chapter"><b>Chapter 1</b><br/>traveling to Tōkyō<br/><span class="secnumbers">(sections 001 - 015)</span></p></a>
+		<a href="sanshirochapter02.html" class="chapter_link"><p class="sanshiro_chapter"><b>Chapter 2</b><br/>meeting Nonomiya<br/><span class="secnumbers">(sections 016 - 026)</span></p></a>
+		<a href="sanshirochapter03.html" class="chapter_link"><p class="sanshiro_chapter"><b>Chapter 3</b><br/>lectures ... hospital girls<br/><span class="secnumbers">(sections 027 - 053)</span></p></a>		
+		<a href="sanshirochapter04.html" class="chapter_link"><p class="sanshiro_chapter"><b>Chapter 4</b><br/>moving Professor Hirota<br/><span class="secnumbers">(sections 054 - 084)</span></p></a>		
+		<a href="sanshirochapter05.html" class="chapter_link"><p class="sanshiro_chapter"><b>Chapter 5</b><br/>stray sheep<br/><span class="secnumbers">(sections 085 - 103)</span></p></a>
+		<a href="sanshirochapter06.html" class="chapter_link"><p class="sanshiro_chapter"><b>Chapter 6</b><br/>great dark void ... field day<br/><span class="secnumbers">(sections 104 - 130)</span></p></a>				
+		<a href="sanshiro_chapter07.html" class="chapter_link"><p class="sanshiro_chapter off_if_three_cols on_if_four_cols on_if_two_cols"><b>Chapter 7</b><br/>Hirota and Haraguchi<br/><span class="secnumbers">(sections 131 - 144)</span></p></a>	
 	</div>
 
-	<div class="SosekiSanshiroPhotoHolder">	
-		<img class="SosekiSanshiro" src="images/sosekiportrait620.jpg" alt="Soseki Portrait 2" />
+	<div class="center_substack on_if_three_cols">
+		<a href="sanshirochapter07.html" class="chapter_link"><p class="sanshiro_chapter off_if_four_cols"><b>Chapter 7</b><br/>Hirota and Haraguchi<br/><span class="secnumbers">(sections 131 - 144)</span></p></a>	
+		<div id="large_sanshiro_cover_holder" class="on_if_four_cols">
+			<img id="SanshiroCover1" src="images/SanshiroCoverLarge.jpg" alt="Sanshiro Large Cover" />
+		</div>
+		<div id="small_sanshiro_cover_holder" class="off_if_four_cols">
+			<img id="SanshiroCover2" src="images/SanshiroCoverSmall.jpg" alt="Sanshiro Small Cover" />
+		</div>
+		<a href="sanshirochapter08.html" class="chapter_link"><p class="sanshiro_chapter  off_if_four_cols"><b>Chapter 8</b><br/>calling on Mineko<br/><span class="secnumbers">(sections 145 - 166)</span></p></a>
 	</div>
 	
-	<div class="SanshiroLeftRight">
-		<a href="sanshirochapter08.html" id="chapter"><p class="SanshiroChapter"><b>Chapter 8</b><br/>calling on Mineko<br/><span class="secnumbers">(sections 145 - 166)</span></p></a>
-		<a href="sanshirochapter09.html" id="chapter"><p class="SanshiroChapter"><b>Chapter 9</b><br/>party ... money from home<br/><span class="secnumbers">(sections 167 - 186)</span></p></a>
-		<a href="sanshirochapter10.html" id="chapter"><p class="SanshiroChapter"><b>Chapter 10</b><br/>Haraguchi painting Mineko<br/><span class="secnumbers">(sections 187 - 205)</span></p></a>
-		<a href="sanshirochapter11.html" id="chapter"><p class="SanshiroChapter"><b>Chapter 11</b><br/>Reiyoshi exposed<br/><span class="secnumbers">(sections 206 - 221)</span></p></a>
-		<a href="sanshirochapter12.html" id="chapter"><p class="SanshiroChapter"><b>Chapter 12</b><br/>at the show ... church<br/><span class="secnumbers">(sections 222 - 239)</span></p></a>
-		<a href="sanshirochapter13.html" id="chapter"><p class="SanshiroChapter"><b>Chapter 13</b><br/>Mineko's painting<br/><span class="secnumbers">(sections 240 - 241)</span></p></a>
+	<div class="sanshiro_left_right">
+		<a href="sanshirochapter08.html" class="chapter_link"><p class="sanshiro_chapter off_if_three_cols on_if_four_cols on_if_two_cols"><b>Chapter 8</b><br/>calling on Mineko<br/><span class="secnumbers">(sections 145 - 166)</span></p></a>
+		<a href="sanshirochapter09.html" class="chapter_link"><p class="sanshiro_chapter"><b>Chapter 9</b><br/>party ... money from home<br/><span class="secnumbers">(sections 167 - 186)</span></p></a>
+		<a href="sanshirochapter10.html" class="chapter_link"><p class="sanshiro_chapter"><b>Chapter 10</b><br/>Haraguchi painting Mineko<br/><span class="secnumbers">(sections 187 - 205)</span></p></a>
+		<a href="sanshirochapter11.html" class="chapter_link"><p class="sanshiro_chapter"><b>Chapter 11</b><br/>Reiyoshi exposed<br/><span class="secnumbers">(sections 206 - 221)</span></p></a>
+		<a href="sanshirochapter12.html" class="chapter_link"><p class="sanshiro_chapter"><b>Chapter 12</b><br/>at the show ... church<br/><span class="secnumbers">(sections 222 - 239)</span></p></a>
+		<a href="sanshirochapter13.html" class="chapter_link"><p class="sanshiro_chapter"><b>Chapter 13</b><br/>Mineko's painting<br/><span class="secnumbers">(sections 240 - 241)</span></p></a>
 	</div>	
 	
 </div>

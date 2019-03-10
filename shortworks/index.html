@@ -2,48 +2,116 @@
 <html lang="en">
 	
 <head>
-	<style>
-		div.bookcover {
-		margin-left: 10px;
-		margin-bottom: 10px;
-		width: 98%;
-		}
-		img.cover {
-		float: left;
-		margin: 5px;
-		height: 250px;
-		width: 157px;
-		}
-		#black { /* Short Works collage border color */
-		border: 5px solid rgb(0,0,0);
-		} 
-		h2.booktitle {
-		margin-left: 190px;
-		margin-bottom: 10px;
-		}
-	h3.booktitle {
-		text-align: justify;
-		margin-left: 190px;
-		margin-right: 20px;
-		margin-bottom: 10px;
-		}
-	</style>
 
 	<meta charset="utf-8"/>
 	<meta name="description" content="Natsume Sōseki (Soseki) Japanese Literature"/>
 	<meta http-equiv="author" content="Ian Sutherland"/>
 	
 	<title>A Collection of Sōseki's Shorter Works</title>	
-	<link href="../css/styles.css" type="text/css" rel="stylesheet" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link href="../css/styles_Jan2019.css" type="text/css" rel="stylesheet"/>		
+
+	<style>
+	div.shortworks_wrapper {	
+		margin: 110px 10px 0;
+		}
+
+	ul.nav_menu li a#inert {
+		border-color: whitesmoke;
+		}
+	ul.nav_menu li a#inert:focus, ul.nav_menu li a#inert:hover, ul.nav_menu li a#inert:active {
+		color: #888;
+		cursor: default;
+		}
+
+	div.book_holder {
+		display: flex;
+		height: 176px;
+		margin-bottom: 10px;
+		width: 98%;
+		}
+	div.book_info {
+		height: 160px;
+		overflow-y: scroll
+		}
+	div.cover {
+		margin: 5px;
+		height: 160px;
+		width: 100px;
+		}
+
+	#black { /* Short Works collage border color */
+		border: 3px solid rgb(0,0,0);
+		} 	
+
+	h2.book_title {
+		margin-top: 5px;
+		margin-left: 5px;
+		margin-bottom: 8px;
+		font-size: 16px;
+		}
+	h3.book_description {
+		text-align: justify;
+		margin: 0 8px 8px 5px;
+		font-size: 12px;
+		}
+	p.notes {
+		font-size: 10px;
+		margin-left: 5px;
+		margin-bottom: 8px;
+		}
+	p.click_arrow {
+		font-size: 12px;
+		margin-bottom: 10px;
+		}
+
+	@media screen and (min-width: 800px) {
+		div.book_holder {
+			height: 216px;
+			}
+		div.cover {
+			margin: 5px;
+			height: 200px;
+			width: 125px;
+			}
+		div.book_info {
+			height: 200px;
+			overflow-y: scroll
+			}
+		h2.book_title {
+			margin-bottom: 10px;
+			font-size: 20px;
+			}
+		h3.book_description {
+			margin: 0 10px 10px 5px;
+			font-size: 16px;
+			}
+		p.notes {
+			font-size: 14px;
+			margin-right: 20px
+			}
+		p.click_arrow {
+			font-size: 14px;
+			margin-bottom: 15px;
+			}
+		p.notes {
+			font-size: 12px;
+			margin-left: 10px;
+			margin-bottom: 10px;
+			}
+		}
+
+	</style>
+
 </head>
 
-<body>
+<body class="constrain_width">
 
 <!-- fixed area at top of page -->
 
-<div class="menubar">
-	<h1 class="pagetitle">Sōseki's Shorter Works</h1>
-	<ul id="navmenu">
+<header class="chapter_page">
+	<h1 class="page_title">Sōseki's Shorter Works</h1>
+	<ul class="nav_menu extra_space">
 		<li><a href="../index.html">Home</a></li>
 		<li><a href="../about.html">About</a></li>
 		<li><a href="../features.html">Features</a></li>
@@ -51,43 +119,64 @@
 		<li><a href="../contact.html">Contact</a></li>
 		<li><a href="../links.html">Links</a></li>
 	</ul>
-</div>
-
-<div class="spacer"></div>
+</header>
 
 <!-- book covers and descriptions -->
 
-<div class="bookcover">
-	<a href="tendreams/tendreams.html"><img class="cover" src="images/tendreamscover250.jpg" alt="Ten Nights' Dreams Cover" id="black" /></a>
-	<h2 class="booktitle">Ten Nights of Dreams (<ruby>夢<rt>ゆめ</rt></ruby><ruby>十<rt>じゅう</rt></ruby><ruby>夜<rt>や</rt></ruby>) by Natsume Sōseki (<ruby>夏目<rt>なつめ</rt>漱石<rt>そうせき</rt></ruby>) &nbsp;&nbsp;&nbsp;&nbsp;1908</h2>
-	<h3 class="booktitle">A series of ten dreams set in various times and touching on various themes.</h3>
-	<h3 class="booktitle">1st Night - 100 years' vigil; 2nd night - the priest and the samurai; 3rd night - child of stone; 4th night - the old man with the snake; 5th Night - racing against the dawn; 6th night - rendering Niō; 7th night - voyage to somewhere; 8th night - the barber shop; 9th night - a mother's story; 10th night - the demise of Shōtarō</h3>
-	<p>&#8592; click on cover for text and audio page</p>
-	<br clear="all">
+<div class="shortworks_wrapper">
+
+<div class="book_holder">
+	<div class="cover" id="black">
+		<a href="tendreams/tendreams.html">
+			<picture>
+				<source media="(min-width: 800px)" srcset="images/tendreamscover200.jpg">
+				<img src="images/tendreamscover160.jpg" alt="Ten Nights' Dreams Cover">
+			</picture>
+		</a>
+	</div>
+	<div class="book_info">
+	<h2 class="book_title">Ten Nights of Dreams (<ruby>夢<rt>ゆめ</rt></ruby><ruby>十<rt>じゅう</rt></ruby><ruby>夜<rt>や</rt></ruby>)&emsp;1908</h2>
+	<h3 class="book_description">A series of ten dreams set in various times and touching on various themes.</h3>
+	<h3 class="book_description">1st Night - 100 years' vigil; 2nd night - the priest and the samurai; 3rd night - child of stone; 4th night - the old man with the snake; 5th Night - racing against the dawn; 6th night - rendering Niō; 7th night - voyage to somewhere; 8th night - the barber shop; 9th night - a mother's story; 10th night - the demise of Shōtarō</h3>
+	<h3 class="book_description">With audio by wis (ウィス)</h3>
+	<p class="click_arrow">&#8592; click cover for text and audio page</p>
+	</div>
 </div>
 	
-<div class="bookcover">
-	<a href="buncho/buncho.html"><img class="cover" src="images/bunchocover250.jpg" alt="Bunchō Cover" id="black" /></a>
-	<h2 class="booktitle">Bunchō (<ruby>文鳥<rt>ぶんちょう</rt></ruby>) by Natsume Sōseki (<ruby>夏目<rt>なつめ</rt>漱石<rt>そうせき</rt></ruby>) &nbsp;&nbsp;&nbsp;&nbsp; 1908</h2>
-	<h3 class="booktitle">A solitary writer, prone to musing on a beautiful woman he once knew, toils away in his cold study to complete a novel. At the urging of a friend, he takes a bunchō (Japanese rice sparrow) as a pet. The story traces his relationship with the bird, from initial apprehension, to fascination, to indifference, and finally, to tragic neglect.</h3>	
-	<p>&#8592; click on cover for text and audio page</p>
-	<br clear="all">
+<div class="book_holder">
+	<div class="cover" id="black">
+		<a href="buncho/buncho.html">
+			<picture>
+				<source media="(min-width: 800px)" srcset="images/bunchocover200.jpg">
+				<img src="images/bunchocover160.jpg" alt="Bunchō Cover">
+			</picture>
+		</a>
+	</div>
+	<div class="book_info">
+	<h2 class="book_title">Bunchō (<ruby>文鳥<rt>ぶんちょう</rt></ruby>)&emsp;1908</h2>
+	<h3 class="book_description">A solitary writer, prone to musing on a beautiful woman he once knew, toils away in his cold study to complete a novel. At the urging of a friend, he takes a bunchō (Japanese rice sparrow) as a pet. The story traces his relationship with the bird, from initial apprehension, to fascination, to indifference, and finally, to tragic neglect.</h3>
+	<h3 class="book_description">With audio by wis (ウィス)</h3>	
+	<p class="click_arrow">&#8592; click cover for text and audio page</p>
+	</div>
 </div>
 	
 
-<div class="bookcover">
-	<a href="tower/tower.html"><img class="cover" src="images/towercover250.jpg" alt="Tower of London Cover" id="black" /></a>
-	<h2 class="booktitle">The Tower of London (<ruby>倫敦<rt>ロンドン</rt></ruby><ruby>塔<rt>とう</rt></ruby>) by Natsume Sōseki (<ruby>夏目<rt>なつめ</rt>漱石<rt>そうせき</rt></ruby>) &nbsp;&nbsp;&nbsp;&nbsp;1905</h2>
-	<h3 class="booktitle">An impressionistic account of the author's sole excursion to the Tower of London during his two years of study abroad in the city. A mix of memories from the visit and fantasies evoked by the sights and sounds and history of the site.</h3>
-	<p>&#8592; click on cover for text and audio page</p>
-	<br clear="all">
+<div class="book_holder">
+	<div class="cover" id="black">
+		<a href="tower/tower.html">
+			<picture>
+				<source media="(min-width: 800px)" srcset="images/towercover200.jpg">
+				<img src="images/towercover160.jpg" alt="Tower Cover">
+			</picture>
+		</a>
+	</div>
+	<div class="book_info">
+	<h2 class="book_title">The Tower of London (<ruby>倫敦<rt>ロンドン</rt></ruby><ruby>塔<rt>とう</rt></ruby>)&emsp;1905</h2>
+	<h3 class="book_description">An impressionistic account of the author's sole excursion to the Tower of London during his two years of study abroad in the city. A mix of memories from the visit and fantasies evoked by the sights and sounds and history of the site.</h3>
+	<h3 class="book_description">With audio by Myōgadani Kabosu (茗荷谷かぼす)</h3>
+	<p class="click_arrow">&#8592; click cover for text and audio page</p>
+	</div>
 </div>
-	
 
-<div class="bookcover">
-	<img class="cover" src="images/maboroshicover250.jpg" alt="Maboroshi Cover" id="black" />
-	<h2 class="booktitle">Maboroshi no Tate (<ruby>幻影<rt>まぼろし</rt></ruby>の<ruby>盾<rt>たて</rt></ruby>) by Natsume Sōseki (<ruby>夏目	<rt>なつめ</rt>漱石<rt>そうせき</rt></ruby>) &nbsp;&nbsp;&nbsp;&nbsp;1905</h2>
-	<p>&#8592; {future}</p>
-	<br clear="all">
 </div>
 
