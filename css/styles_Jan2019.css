@@ -164,7 +164,7 @@ ul.section_break {
 	flex-wrap: wrap;
 	}
 ul.section_break li a.study_guide {
-	margin: 0 30px
+	margin: 0 30px;
 	}
 ul.section_break li a:link, ul.section_break li a:visited {
 	color: #888;
